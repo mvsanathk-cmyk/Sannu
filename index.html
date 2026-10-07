@@ -1,0 +1,2453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sanath - Software Engineer Portfolio showcasing projects, technical skills, and experience.">
+  <meta name="author" content="Sanath">
+  <title>Sanath | Software Engineer Portfolio</title>
+  
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts: Plus Jakarta Sans, JetBrains Mono, Press Start 2P, Silkscreen -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="has-sidebar">
+
+  <!-- ==========================================
+       MOBILE TOP HEADER (Visible on small screens)
+       ========================================== -->
+  <header id="mobile-header" class="mobile-pixel-header" aria-label="Mobile Header">
+    <button id="mobile-menu-btn" class="pixel-hamburger-btn" type="button" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="pixel-sidebar">
+      <span class="pixel-burger-icon" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+      <span class="burger-text">MENU</span>
+    </button>
+
+    <a href="#hero" class="mobile-brand-logo" aria-label="Home">
+      &lt;<span class="accent">SANATH</span>.DEV/&gt;
+    </a>
+
+    <!-- Mobile Theme Toggle -->
+    <button id="mobile-theme-toggle" class="pixel-theme-btn mobile-only" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+      <span class="btn-theme-icon" aria-hidden="true">&#9790;</span>
+    </button>
+  </header>
+
+  <!-- Mobile Backdrop Overlay -->
+  <div id="sidebar-backdrop" class="sidebar-backdrop" aria-hidden="true"></div>
+
+  <!-- ==========================================
+       VERTICAL NAVIGATION BAR (LEFT SIDE)
+       Pixel Art RPG Aesthetic & Fully Accessible
+       ========================================== -->
+  <aside id="pixel-sidebar-wrapper" class="pixel-sidebar-wrapper">
+    <nav id="pixel-sidebar" class="pixel-sidebar" aria-label="Main Navigation">
+      
+      <!-- Top RPG Profile HUD -->
+      <div class="sidebar-hud">
+        <div class="hud-top-row">
+          <div class="hud-avatar-frame">
+            <img src="sanath-pixel-avatar.jpg" alt="Sanath Pixel Avatar" class="hud-avatar-img">
+            <span class="hud-status-dot" aria-hidden="true"></span>
+          </div>
+          <div class="hud-player-meta">
+            <span class="hud-player-tag">PLAYER 1</span>
+            <span class="hud-player-name">SANATH.SYS</span>
+            <div class="hud-hp-bar" aria-label="Health Points 100%">
+              <span class="hp-label">HP</span>
+              <div class="hp-meter">
+                <span class="hp-fill"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hud-badge-row">
+          <span class="hud-badge">LVL 99 ENG</span>
+          <span class="hud-badge hud-badge-status">READY</span>
+        </div>
+
+        <!-- Mobile Drawer Close Button -->
+        <button id="sidebar-close-btn" class="pixel-close-btn" type="button" aria-label="Close navigation menu">
+          &times;
+        </button>
+      </div>
+
+      <!-- Navigation Section Label -->
+      <div class="sidebar-section-divider">
+        <span class="divider-line"></span>
+        <span class="divider-text">QUEST MENU</span>
+        <span class="divider-line"></span>
+      </div>
+
+      <!-- Primary Vertical Navigation Links -->
+      <ul class="pixel-nav-list" role="list">
+        
+        <!-- 1. Home -->
+        <li class="pixel-nav-item">
+          <a href="#hero" class="pixel-nav-link active" data-section="hero" aria-current="page">
+            <span class="pixel-cursor" aria-hidden="true">&#9654;</span>
+            <span class="pixel-icon-box" aria-hidden="true">
+              <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                <rect x="7" y="1" width="2" height="2"/>
+                <rect x="5" y="3" width="6" height="2"/>
+                <rect x="3" y="5" width="10" height="2"/>
+                <rect x="1" y="7" width="14" height="2"/>
+                <rect x="2" y="9" width="12" height="6"/>
+                <rect x="6" y="10" width="4" height="5" class="pixel-cutout"/>
+              </svg>
+            </span>
+            <span class="pixel-nav-text">Home</span>
+            <span class="pixel-num">01</span>
+          </a>
+        </li>
+
+        <!-- 2. About Me -->
+        <li class="pixel-nav-item">
+          <a href="#about" class="pixel-nav-link" data-section="about">
+            <span class="pixel-cursor" aria-hidden="true">&#9654;</span>
+            <span class="pixel-icon-box" aria-hidden="true">
+              <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                <rect x="2" y="3" width="3" height="3"/>
+                <rect x="6" y="4" width="4" height="2"/>
+                <rect x="11" y="3" width="3" height="3"/>
+                <rect x="1" y="5" width="14" height="4"/>
+                <rect x="3" y="9" width="10" height="3"/>
+                <rect x="5" y="12" width="6" height="2"/>
+                <rect x="7" y="14" width="2" height="1"/>
+              </svg>
+            </span>
+            <span class="pixel-nav-text">About Me</span>
+            <span class="pixel-num">02</span>
+          </a>
+        </li>
+
+        <!-- 3. Skills -->
+        <li class="pixel-nav-item">
+          <a href="#skills" class="pixel-nav-link" data-section="skills">
+            <span class="pixel-cursor" aria-hidden="true">&#9654;</span>
+            <span class="pixel-icon-box" aria-hidden="true">
+              <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                <rect x="8" y="1" width="3" height="2"/>
+                <rect x="6" y="3" width="3" height="3"/>
+                <rect x="4" y="6" width="4" height="2"/>
+                <rect x="2" y="8" width="8" height="2"/>
+                <rect x="7" y="10" width="3" height="2"/>
+                <rect x="5" y="12" width="3" height="3"/>
+                <rect x="4" y="15" width="2" height="1"/>
+              </svg>
+            </span>
+            <span class="pixel-nav-text">Skills</span>
+            <span class="pixel-num">03</span>
+          </a>
+        </li>
+
+        <!-- 4. Timeline -->
+        <li class="pixel-nav-item">
+          <a href="#timeline" class="pixel-nav-link" data-section="timeline">
+            <span class="pixel-cursor" aria-hidden="true">&#9654;</span>
+            <span class="pixel-icon-box" aria-hidden="true">
+              <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                <rect x="2" y="2" width="12" height="2"/>
+                <rect x="3" y="4" width="10" height="2"/>
+                <rect x="5" y="6" width="6" height="2"/>
+                <rect x="7" y="7" width="2" height="2"/>
+                <rect x="5" y="8" width="6" height="2"/>
+                <rect x="3" y="10" width="10" height="2"/>
+                <rect x="2" y="12" width="12" height="2"/>
+              </svg>
+            </span>
+            <span class="pixel-nav-text">Timeline</span>
+            <span class="pixel-num">04</span>
+          </a>
+        </li>
+
+        <!-- 5. Projects -->
+        <li class="pixel-nav-item">
+          <a href="#projects" class="pixel-nav-link" data-section="projects">
+            <span class="pixel-cursor" aria-hidden="true">&#9654;</span>
+            <span class="pixel-icon-box" aria-hidden="true">
+              <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                <rect x="2" y="2" width="12" height="12"/>
+                <rect x="4" y="3" width="6" height="4" class="pixel-cutout"/>
+                <rect x="4" y="9" width="8" height="4" class="pixel-cutout"/>
+                <rect x="11" y="3" width="2" height="2" class="pixel-cutout"/>
+              </svg>
+            </span>
+            <span class="pixel-nav-text">Projects</span>
+            <span class="pixel-num">05</span>
+          </a>
+        </li>
+
+        <!-- 6. Testimonials -->
+        <li class="pixel-nav-item">
+          <a href="#testimonials" class="pixel-nav-link" data-section="testimonials">
+            <span class="pixel-cursor" aria-hidden="true">&#9654;</span>
+            <span class="pixel-icon-box" aria-hidden="true">
+              <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                <rect x="2" y="2" width="12" height="9"/>
+                <rect x="2" y="11" width="4" height="2"/>
+                <rect x="2" y="13" width="2" height="2"/>
+                <rect x="5" y="5" width="2" height="3" class="pixel-cutout"/>
+                <rect x="9" y="5" width="2" height="3" class="pixel-cutout"/>
+              </svg>
+            </span>
+            <span class="pixel-nav-text">Testimonials</span>
+            <span class="pixel-num">06</span>
+          </a>
+        </li>
+
+        <!-- 7. Chat -->
+        <li class="pixel-nav-item">
+          <a href="#chat" class="pixel-nav-link" data-section="chat">
+            <span class="pixel-cursor" aria-hidden="true">&#9654;</span>
+            <span class="pixel-icon-box" aria-hidden="true">
+              <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                <rect x="7" y="1" width="2" height="2"/>
+                <rect x="3" y="3" width="10" height="9"/>
+                <rect x="1" y="6" width="2" height="3"/>
+                <rect x="13" y="6" width="2" height="3"/>
+                <rect x="5" y="6" width="2" height="2" class="pixel-cutout"/>
+                <rect x="9" y="6" width="2" height="2" class="pixel-cutout"/>
+                <rect x="6" y="9" width="4" height="1" class="pixel-cutout"/>
+                <rect x="4" y="12" width="8" height="3"/>
+              </svg>
+            </span>
+            <span class="pixel-nav-text">Chat</span>
+            <span class="pixel-badge-new">NEW</span>
+          </a>
+        </li>
+
+        <!-- 8. Contact -->
+        <li class="pixel-nav-item">
+          <a href="#contact" class="pixel-nav-link" data-section="contact">
+            <span class="pixel-cursor" aria-hidden="true">&#9654;</span>
+            <span class="pixel-icon-box" aria-hidden="true">
+              <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                <rect x="1" y="3" width="14" height="10"/>
+                <rect x="3" y="5" width="2" height="2" class="pixel-cutout"/>
+                <rect x="11" y="5" width="2" height="2" class="pixel-cutout"/>
+                <rect x="5" y="7" width="2" height="2" class="pixel-cutout"/>
+                <rect x="9" y="7" width="2" height="2" class="pixel-cutout"/>
+                <rect x="7" y="8" width="2" height="2" class="pixel-cutout"/>
+              </svg>
+            </span>
+            <span class="pixel-nav-text">Contact</span>
+            <span class="pixel-num">08</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <!-- Bottom Panel: Night Mode Toggle & Status -->
+      <div class="sidebar-footer">
+        <div class="theme-control-box">
+          <span class="control-label">THEME MODE</span>
+          <button id="theme-toggle" class="pixel-theme-toggle-btn" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+            <span class="toggle-light-label">&#9728; LIGHT</span>
+            <span class="toggle-switch-slider"></span>
+            <span class="toggle-dark-label">&#9790; DARK</span>
+          </button>
+        </div>
+
+        <div class="sidebar-status-box">
+          <span class="pixel-blink-dot" aria-hidden="true"></span>
+          <span class="status-text">SYS: NORMAL // 60 FPS</span>
+        </div>
+      </div>
+
+    </nav>
+  </aside>
+
+  <!-- ==========================================
+       MAIN CONTENT (Offset on Desktop to allow left sidebar)
+       ========================================== -->
+  <main id="main-content" class="main-content-layout">
+
+    <!-- ==========================================
+         HERO SECTION (Minimalist & Clean)
+         ========================================== -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+      <div class="container hero-container">
+        
+        <!-- Left: Welcoming Typography, Title, Tagline & CTAs -->
+        <div class="hero-content">
+          <!-- Availability Badge -->
+          <div class="hero-badge" role="status">
+            <span class="status-indicator" aria-hidden="true"></span>
+            <span>Available for new opportunities</span>
+          </div>
+
+          <!-- Welcome Title -->
+          <h1 id="hero-title" class="hero-title">
+            Crafting elegant software with <span class="highlight-text">precision &amp; purpose</span>.
+          </h1>
+
+          <!-- Tagline -->
+          <p class="hero-subtitle">
+            Hi, I'm <strong class="engineer-name">Sanath</strong> &mdash; a Software Engineer specialized in building high-performance web systems, scalable backends, and intuitive user experiences.
+          </p>
+
+          <!-- Call-to-action buttons -->
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M3.333 8h9.334M8.667 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+
+          <!-- Quick Highlights / Stats -->
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-number">3+</span>
+              <span class="meta-label">Years of Experience</span>
+            </div>
+            <div class="meta-divider" aria-hidden="true"></div>
+            <div class="meta-item">
+              <span class="meta-number">15+</span>
+              <span class="meta-label">Projects Shipped</span>
+            </div>
+            <div class="meta-divider" aria-hidden="true"></div>
+            <div class="meta-item">
+              <span class="meta-number">99.9%</span>
+              <span class="meta-label">Code Reliability</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Profile Visual Card -->
+        <div class="hero-visual">
+          <div class="hero-avatar-card">
+            <div class="avatar-ring">
+              <img src="sanath pic.jpeg" alt="Sanath - Software Engineer" class="hero-avatar-img">
+            </div>
+            <div class="avatar-floating-card">
+              <div class="floating-icon" aria-hidden="true">&lt;/&gt;</div>
+              <div class="floating-text">
+                <span class="floating-title">Software Engineer</span>
+                <span class="floating-sub">Full-Stack &amp; Systems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         ABOUT SECTION (Minimalist & Clean with Pixel Art Avatar)
+         ========================================== -->
+    <section id="about" class="about-section" aria-labelledby="about-title">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="pixel-section-tag">// CHARACTER PROFILE</span>
+          <h2 id="about-title" class="section-title">About Me</h2>
+          <p class="section-lead">Bridging software architecture with clean craftsmanship and human-centered design.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Pixel-Art Profile Avatar Showcase -->
+          <div class="about-avatar-col">
+            <div class="about-avatar-card">
+              <div class="avatar-frame-retro">
+                <img src="sanath pic.jpeg" alt="Sanath - Software Engineer Profile Photo" class="about-pixel-avatar-img">
+                <div class="avatar-corner-decor tl" aria-hidden="true"></div>
+                <div class="avatar-corner-decor tr" aria-hidden="true"></div>
+                <div class="avatar-corner-decor bl" aria-hidden="true"></div>
+                <div class="avatar-corner-decor br" aria-hidden="true"></div>
+              </div>
+              <div class="avatar-stat-card">
+                <div class="stat-row">
+                  <span class="stat-key">ROLE:</span>
+                  <span class="stat-val">Full-Stack Engineer</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-key">EXP LEVEL:</span>
+                  <span class="stat-val highlight-gold">LVL 25+ [ACTIVE]</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-key">LOCATION:</span>
+                  <span class="stat-val">Remote / Hybrid</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-key">AVAILABILITY:</span>
+                  <span class="stat-val highlight-green">&#9679; Open to Opportunities</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Short Bio, Career Highlights & Personal Interests -->
+          <div class="about-bio-col">
+            <div class="bio-intro-box">
+              <h3 class="bio-heading">Hello World! I'm <span class="highlight-name">Sanath</span>.</h3>
+              <p class="bio-paragraph">
+                I am a software engineer dedicated to building resilient distributed systems, modern web platforms, and intuitive digital interfaces. With a deep passion for clean architectural principles and delightful user experiences, I turn complex problems into robust, production-grade applications.
+              </p>
+              <p class="bio-paragraph">
+                My approach to engineering balances high execution speed with craftsmanship—ensuring systems are not just functional, but scalable, testable, and a pleasure for developers and end-users alike to navigate.
+              </p>
+            </div>
+
+            <!-- Two-column highlight cards: Career Highlights & Personal Interests -->
+            <div class="about-highlights-grid">
+              
+              <!-- Card 1: Career Highlights -->
+              <div class="highlight-card">
+                <div class="highlight-card-header">
+                  <div class="highlight-icon-box" aria-hidden="true">
+                    <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                      <rect x="7" y="1" width="2" height="2"/>
+                      <rect x="5" y="3" width="6" height="2"/>
+                      <rect x="3" y="5" width="10" height="2"/>
+                      <rect x="1" y="7" width="14" height="2"/>
+                      <rect x="2" y="9" width="12" height="6"/>
+                    </svg>
+                  </div>
+                  <h4 class="highlight-card-title">Career Highlights</h4>
+                </div>
+                <ul class="highlight-list">
+                  <li>
+                    <span class="list-bullet">&#9654;</span>
+                    <div><strong>High-Throughput Services:</strong> Architected APIs handling millions of monthly requests with sub-100ms response latencies.</div>
+                  </li>
+                  <li>
+                    <span class="list-bullet">&#9654;</span>
+                    <div><strong>Full-Stack Mastery:</strong> Delivered end-to-end web apps from scalable database schemas to responsive frontend interfaces.</div>
+                  </li>
+                  <li>
+                    <span class="list-bullet">&#9654;</span>
+                    <div><strong>Production Reliability:</strong> Championed automated CI/CD pipelines, containerization, and monitoring to maintain 99.9% uptime.</div>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Card 2: Personal Interests -->
+              <div class="highlight-card">
+                <div class="highlight-card-header">
+                  <div class="highlight-icon-box interest-icon-box" aria-hidden="true">
+                    <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                      <rect x="2" y="3" width="3" height="3"/>
+                      <rect x="6" y="4" width="4" height="2"/>
+                      <rect x="11" y="3" width="3" height="3"/>
+                      <rect x="1" y="5" width="14" height="4"/>
+                      <rect x="3" y="9" width="10" height="3"/>
+                      <rect x="5" y="12" width="6" height="2"/>
+                      <rect x="7" y="14" width="2" height="1"/>
+                    </svg>
+                  </div>
+                  <h4 class="highlight-card-title">Beyond The Code</h4>
+                </div>
+                <ul class="highlight-list">
+                  <li>
+                    <span class="list-bullet">&#9654;</span>
+                    <div><strong>Retro Gaming &amp; Pixel Art:</strong> Passionate about classic 16-bit RPGs, indie game mechanics, and pixel-grid aesthetics.</div>
+                  </li>
+                  <li>
+                    <span class="list-bullet">&#9654;</span>
+                    <div><strong>Open Source &amp; Tooling:</strong> Constantly tinkering with CLI utilities, experimental frameworks, and custom dev tools.</div>
+                  </li>
+                  <li>
+                    <span class="list-bullet">&#9654;</span>
+                    <div><strong>Coffee &amp; Mechanical Keyboards:</strong> Obsessed with artisanal pour-over coffee recipes and building tactile custom keyboards.</div>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Philosophy Callout -->
+            <div class="about-quote-box">
+              <span class="quote-symbol" aria-hidden="true">&ldquo;</span>
+              <p class="quote-text">
+                Simplicity is prerequisite for reliability. Great software is built through clarity, empathy, and relentless iteration.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SKILLS SECTION (Pixel Art RPG Skill Tree)
+         ========================================== -->
+    <section id="skills" class="skills-section" aria-labelledby="skills-title">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="pixel-section-tag">// ARSENAL &amp; ATTRIBUTES</span>
+          <h2 id="skills-title" class="section-title">Technical Skills &amp; Arsenal</h2>
+          <p class="section-lead">Battle-tested competencies, modern frameworks, and runtime proficiencies calibrated through production deployments.</p>
+        </div>
+
+        <!-- Four-Tree Skill Grid -->
+        <div class="skills-grid">
+          
+          <!-- ==========================================================
+               TREE 01: CORE PROGRAMMING LANGUAGES
+               Represents foundational syntax, algorithmic thinking, and typed scalability.
+               ========================================================== -->
+          <article class="skills-category-card tree-cyan">
+            <div class="category-header">
+              <div class="cat-icon-box" aria-hidden="true">
+                <!-- Pixel Code Brackets Icon: Symbolizes raw programming languages and logic syntax -->
+                <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                  <rect x="2" y="7" width="2" height="2"/>
+                  <rect x="4" y="5" width="2" height="2"/>
+                  <rect x="4" y="9" width="2" height="2"/>
+                  <rect x="6" y="3" width="2" height="2"/>
+                  <rect x="6" y="11" width="2" height="2"/>
+                  <rect x="12" y="7" width="2" height="2"/>
+                  <rect x="10" y="5" width="2" height="2"/>
+                  <rect x="10" y="9" width="2" height="2"/>
+                  <rect x="8" y="3" width="2" height="2"/>
+                  <rect x="8" y="11" width="2" height="2"/>
+                </svg>
+              </div>
+              <div class="cat-info">
+                <span class="cat-tree-badge">TREE 01 // SYNTAX</span>
+                <h3 class="cat-title">Languages &amp; Core</h3>
+              </div>
+              <span class="cat-mastery-pill">LVL 95+</span>
+            </div>
+
+            <ul class="skills-list" role="list">
+              
+              <!-- TypeScript: Represents type safety, generics, and large-scale architectural consistency -->
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-cursor" aria-hidden="true">&#9654;</span>
+                  <span class="skill-name">TypeScript</span>
+                  <span class="skill-badge-sub">Strict Typings</span>
+                  <span class="skill-val">95%</span>
+                </div>
+                <div class="pixel-exp-meter" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="TypeScript proficiency 95%">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill" style="--skill-pct: 95%;"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- JavaScript (ES6+): Represents event loops, asynchronous programming, DOM APIs, and V8 optimization -->
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-cursor" aria-hidden="true">&#9654;</span>
+                  <span class="skill-name">JavaScript (ES6+)</span>
+                  <span class="skill-badge-sub">Async / V8</span>
+                  <span class="skill-val">98%</span>
+                </div>
+                <div class="pixel-exp-meter" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency 98%">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill" style="--skill-pct: 98%;"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Python: Represents backend automation, data transformations, and rapid API prototyping -->
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-cursor" aria-hidden="true">&#9654;</span>
+                  <span class="skill-name">Python</span>
+                  <span class="skill-badge-sub">APIs &amp; Scripting</span>
+                  <span class="skill-val">88%</span>
+                </div>
+                <div class="pixel-exp-meter" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Python proficiency 88%">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill" style="--skill-pct: 88%;"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- SQL: Represents relational database management, schema design, and query optimization -->
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-cursor" aria-hidden="true">&#9654;</span>
+                  <span class="skill-name">SQL (Postgres/MySQL)</span>
+                  <span class="skill-badge-sub">Relational / ACID</span>
+                  <span class="skill-val">90%</span>
+                </div>
+                <div class="pixel-exp-meter" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="SQL proficiency 90%">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill" style="--skill-pct: 90%;"></div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </article>
+
+          <!-- ==========================================================
+               TREE 02: FRAMEWORKS & RUNTIMES
+               Represents modern reactive web development, server rendering, and microservices.
+               ========================================================== -->
+          <article class="skills-category-card tree-indigo">
+            <div class="category-header">
+              <div class="cat-icon-box" aria-hidden="true">
+                <!-- Pixel Layers / Framework Icon: Symbolizes modular component architecture -->
+                <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                  <rect x="7" y="1" width="2" height="2"/>
+                  <rect x="5" y="3" width="6" height="2"/>
+                  <rect x="3" y="5" width="10" height="2"/>
+                  <rect x="1" y="7" width="14" height="2"/>
+                  <rect x="3" y="9" width="10" height="2"/>
+                  <rect x="5" y="11" width="6" height="2"/>
+                  <rect x="7" y="13" width="2" height="2"/>
+                </svg>
+              </div>
+              <div class="cat-info">
+                <span class="cat-tree-badge">TREE 02 // STACKS</span>
+                <h3 class="cat-title">Frameworks &amp; Web</h3>
+              </div>
+              <span class="cat-mastery-pill">LVL 92+</span>
+            </div>
+
+            <ul class="skills-list" role="list">
+              
+              <!-- React & Next.js: Represents reactive component trees, SSR/SSG, and server actions -->
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-cursor" aria-hidden="true">&#9654;</span>
+                  <span class="skill-name">React &amp; Next.js</span>
+                  <span class="skill-badge-sub">SSR / App Router</span>
+                  <span class="skill-val">94%</span>
+                </div>
+                <div class="pixel-exp-meter" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100" aria-label="React and Next.js proficiency 94%">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill" style="--skill-pct: 94%;"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Node.js & Express: Represents non-blocking I/O, REST endpoints, and backend middleware -->
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-cursor" aria-hidden="true">&#9654;</span>
+                  <span class="skill-name">Node.js &amp; Express</span>
+                  <span class="skill-badge-sub">Microservices</span>
+                  <span class="skill-val">92%</span>
+                </div>
+                <div class="pixel-exp-meter" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Node.js and Express proficiency 92%">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill" style="--skill-pct: 92%;"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- HTML5 & Modern CSS / Tailwind: Represents semantic design, responsive fluid grids, and animations -->
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-cursor" aria-hidden="true">&#9654;</span>
+                  <span class="skill-name">HTML5, CSS &amp; Tailwind</span>
+                  <span class="skill-badge-sub">UI / A11y</span>
+                  <span class="skill-val">96%</span>
+                </div>
+                <div class="pixel-exp-meter" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="100" aria-label="HTML5 and CSS proficiency 96%">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill" style="--skill-pct: 96%;"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- RESTful APIs & GraphQL: Represents client-server contracts, schema designs, and data caching -->
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-cursor" aria-hidden="true">&#9654;</span>
+                  <span class="skill-name">REST &amp; GraphQL</span>
+                  <span class="skill-badge-sub">API Design</span>
+                  <span class="skill-val">90%</span>
+                </div>
+                <div class="pixel-exp-meter" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="REST and GraphQL proficiency 90%">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill" style="--skill-pct: 90%;"></div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </article>
+
+          <!-- ==========================================================
+               TREE 03: CLOUD, DEVOPS & INFRASTRUCTURE
+               Represents containerization, deployment pipelines, in-memory caches, and reliability.
+               ========================================================== -->
+          <article class="skills-category-card tree-green">
+            <div class="category-header">
+              <div class="cat-icon-box" aria-hidden="true">
+                <!-- Pixel Server / Terminal Icon: Symbolizes infrastructure and cloud orchestration -->
+                <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                  <rect x="2" y="2" width="12" height="3"/>
+                  <rect x="2" y="7" width="12" height="3"/>
+                  <rect x="2" y="12" width="12" height="3"/>
+                  <rect x="11" y="3" width="2" height="1" class="pixel-cutout"/>
+                  <rect x="11" y="8" width="2" height="1" class="pixel-cutout"/>
+                  <rect x="11" y="13" width="2" height="1" class="pixel-cutout"/>
+                </svg>
+              </div>
+              <div class="cat-info">
+                <span class="cat-tree-badge">TREE 03 // INFRA</span>
+                <h3 class="cat-title">Cloud &amp; DevOps</h3>
+              </div>
+              <span class="cat-mastery-pill">LVL 88+</span>
+            </div>
+
+            <ul class="skills-list" role="list">
+              
+              <!-- Docker & Containers: Represents isolated environments, microservice networking, and multi-stage builds -->
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-cursor" aria-hidden="true">&#9654;</span>
+                  <span class="skill-name">Docker &amp; Containers</span>
+                  <span class="skill-badge-sub">Compose / Multi-stage</span>
+                  <span class="skill-val">88%</span>
+                </div>
+                <div class="pixel-exp-meter" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" aria-label="Docker proficiency 88%">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill" style="--skill-pct: 88%;"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Git & GitHub Actions: Represents version control, automated testing pipelines, and trunk-based workflows -->
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-cursor" aria-hidden="true">&#9654;</span>
+                  <span class="skill-name">Git &amp; CI/CD Pipelines</span>
+                  <span class="skill-badge-sub">GitHub Actions</span>
+                  <span class="skill-val">95%</span>
+                </div>
+                <div class="pixel-exp-meter" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Git and CI/CD proficiency 95%">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill" style="--skill-pct: 95%;"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- AWS & Cloud Platforms: Represents cloud compute, storage buckets, IAM security, and serverless compute -->
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-cursor" aria-hidden="true">&#9654;</span>
+                  <span class="skill-name">AWS &amp; Cloud Services</span>
+                  <span class="skill-badge-sub">S3 / Lambda / EC2</span>
+                  <span class="skill-val">84%</span>
+                </div>
+                <div class="pixel-exp-meter" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100" aria-label="AWS Cloud proficiency 84%">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill" style="--skill-pct: 84%;"></div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Redis & In-Memory Caching: Represents low-latency data access, session states, and message queues -->
+              <li class="skill-item">
+                <div class="skill-meta">
+                  <span class="skill-cursor" aria-hidden="true">&#9654;</span>
+                  <span class="skill-name">Redis &amp; Caching</span>
+                  <span class="skill-badge-sub">Pub/Sub &amp; Memory</span>
+                  <span class="skill-val">86%</span>
+                </div>
+                <div class="pixel-exp-meter" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" aria-label="Redis caching proficiency 86%">
+                  <div class="exp-bar-track">
+                    <div class="exp-bar-fill" style="--skill-pct: 86%;"></div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </article>
+
+          <!-- ==========================================================
+               TREE 04: ENGINEERING PARADIGMS & PASSIVE ATTRIBUTES
+               Styled badge list of high-leverage software practices, system architecture, and quality controls.
+               ========================================================== -->
+          <article class="skills-category-card tree-gold">
+            <div class="category-header">
+              <div class="cat-icon-box" aria-hidden="true">
+                <!-- Pixel Star / Passive Perk Icon: Symbolizes architectural and quality craftsmanship -->
+                <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                  <rect x="7" y="1" width="2" height="2"/>
+                  <rect x="6" y="3" width="4" height="2"/>
+                  <rect x="1" y="5" width="14" height="2"/>
+                  <rect x="3" y="7" width="10" height="2"/>
+                  <rect x="5" y="9" width="6" height="2"/>
+                  <rect x="4" y="11" width="3" height="3"/>
+                  <rect x="9" y="11" width="3" height="3"/>
+                </svg>
+              </div>
+              <div class="cat-info">
+                <span class="cat-tree-badge">TREE 04 // PASSIVES</span>
+                <h3 class="cat-title">Paradigms &amp; Craft</h3>
+              </div>
+              <span class="cat-mastery-pill">BUFFS</span>
+            </div>
+
+            <!-- Styled list of core engineering competencies and execution principles -->
+            <ul class="paradigms-list" role="list">
+              
+              <!-- System Design: Architectural pattern separation, fault tolerance, and event-driven backends -->
+              <li class="paradigm-badge-item">
+                <span class="badge-icon" aria-hidden="true">&#9874;</span>
+                <div class="badge-text">
+                  <strong>Distributed Systems</strong>
+                  <span>Microservices &amp; Event-Driven</span>
+                </div>
+              </li>
+
+              <!-- Performance Engineering: Profiling, bundle splitting, memory leak avoidance, and low TTFB -->
+              <li class="paradigm-badge-item">
+                <span class="badge-icon" aria-hidden="true">&#9889;</span>
+                <div class="badge-text">
+                  <strong>Performance Optimization</strong>
+                  <span>Sub-100ms API Latency &amp; CWV</span>
+                </div>
+              </li>
+
+              <!-- Quality Engineering: Unit, integration, and E2E test coverage with Jest/Playwright -->
+              <li class="paradigm-badge-item">
+                <span class="badge-icon" aria-hidden="true">&#10003;</span>
+                <div class="badge-text">
+                  <strong>TDD &amp; Automated Testing</strong>
+                  <span>Jest, Vitest &amp; Integration Specs</span>
+                </div>
+              </li>
+
+              <!-- Clean Code & Security: Refactoring, vulnerability patching, OWASP compliance, and empathetic peer reviews -->
+              <li class="paradigm-badge-item">
+                <span class="badge-icon" aria-hidden="true">&#9733;</span>
+                <div class="badge-text">
+                  <strong>Security &amp; Clean Architecture</strong>
+                  <span>OWASP Compliance &amp; Code Review</span>
+                </div>
+              </li>
+
+            </ul>
+          </article>
+
+        </div>
+
+        <!-- ==========================================================
+             QUICK WEAPONS LOADOUT RIBBON
+             Pixel-art inventory loadout displaying primary daily toolchain
+             ========================================================== -->
+        <div class="skills-loadout-ribbon">
+          <div class="loadout-label">
+            <span class="pixel-blink-dot" aria-hidden="true"></span>
+            <span>ACTIVE LOADOUT // DAILY DRIVERS:</span>
+          </div>
+          <div class="loadout-tags" aria-label="Daily active technologies">
+            <span class="loadout-chip">TypeScript</span>
+            <span class="loadout-chip">React</span>
+            <span class="loadout-chip">Next.js</span>
+            <span class="loadout-chip">Node.js</span>
+            <span class="loadout-chip">PostgreSQL</span>
+            <span class="loadout-chip">Docker</span>
+            <span class="loadout-chip">Redis</span>
+            <span class="loadout-chip">Git</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TIMELINE SECTION (Experience, Major Projects & Education)
+         ========================================== -->
+    <section id="timeline" class="timeline-section" aria-labelledby="timeline-title">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="pixel-section-tag">// QUEST LOG &amp; MILESTONES</span>
+          <h2 id="timeline-title" class="section-title">Experience &amp; Milestones</h2>
+          <p class="section-lead">A chronological journey through software engineering roles, flagship system launches, and academic foundations.</p>
+        </div>
+
+        <!-- Filter / Legend Bar -->
+        <div class="timeline-legend" aria-label="Timeline categories">
+          <span class="legend-item"><span class="legend-dot dot-career"></span> Career Milestone</span>
+          <span class="legend-item"><span class="legend-dot dot-project"></span> Major Project</span>
+          <span class="legend-item"><span class="legend-dot dot-edu"></span> Education</span>
+        </div>
+
+        <!-- Timeline Spine & Cards Container -->
+        <div class="timeline-wrapper">
+          <div class="timeline-spine" aria-hidden="true"></div>
+
+          <!-- Item 1: Career Milestone -->
+          <article class="timeline-card-wrapper type-career">
+            <div class="timeline-node" aria-hidden="true">
+              <span class="node-icon">&#9874;</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <div class="timeline-meta-row">
+                  <span class="timeline-type-badge badge-career">CAREER MILESTONE</span>
+                  <time class="timeline-period" datetime="2024">2024 &mdash; PRESENT</time>
+                </div>
+                <h3 class="timeline-heading">Lead Full-Stack Software Engineer</h3>
+                <span class="timeline-org">Nexus Cloud Labs &bull; Bengaluru / Remote</span>
+              </div>
+              <p class="timeline-body">
+                Architected high-throughput event-driven microservices serving 1.5M+ active users. Optimized PostgreSQL queries and Redis caching layers to reduce p99 latency by 42%, while leading architectural reviews across 4 engineering squads.
+              </p>
+              <ul class="timeline-tags" aria-label="Key technologies">
+                <li>TypeScript</li>
+                <li>Next.js</li>
+                <li>Node.js</li>
+                <li>PostgreSQL</li>
+                <li>AWS</li>
+                <li>Docker</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Item 2: Major Project Launch -->
+          <article class="timeline-card-wrapper type-project">
+            <div class="timeline-node" aria-hidden="true">
+              <span class="node-icon">&#9889;</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <div class="timeline-meta-row">
+                  <span class="timeline-type-badge badge-project">MAJOR PROJECT</span>
+                  <time class="timeline-period" datetime="2023/2024">2023 &mdash; 2024</time>
+                </div>
+                <h3 class="timeline-heading">Real-Time Telemetry &amp; Analytics Engine</h3>
+                <span class="timeline-org">Flagship System Build &bull; High-Scale Streaming</span>
+              </div>
+              <p class="timeline-body">
+                Designed and deployed a distributed analytics pipeline ingesting 25,000+ events per second. Built low-latency WebSockets streaming visualizations, automated anomaly alerts, and achieved sub-second dashboard refreshes.
+              </p>
+              <ul class="timeline-tags" aria-label="Key technologies">
+                <li>Go</li>
+                <li>React</li>
+                <li>Redis Pub/Sub</li>
+                <li>WebSockets</li>
+                <li>Tailwind CSS</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Item 3: Career Milestone -->
+          <article class="timeline-card-wrapper type-career">
+            <div class="timeline-node" aria-hidden="true">
+              <span class="node-icon">&#9874;</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <div class="timeline-meta-row">
+                  <span class="timeline-type-badge badge-career">CAREER MILESTONE</span>
+                  <time class="timeline-period" datetime="2022/2023">2022 &mdash; 2023</time>
+                </div>
+                <h3 class="timeline-heading">Full-Stack Software Engineer</h3>
+                <span class="timeline-org">PixelCraft Interactive &bull; Product Squad</span>
+              </div>
+              <p class="timeline-body">
+                Developed responsive web applications and customer-facing internal tools. Standardized REST and GraphQL integration contracts, integrated automated Jest test suites, and elevated Google Lighthouse performance scores to 95+.
+              </p>
+              <ul class="timeline-tags" aria-label="Key technologies">
+                <li>React</li>
+                <li>JavaScript</li>
+                <li>Express</li>
+                <li>GraphQL</li>
+                <li>Jest</li>
+                <li>GitHub Actions</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Item 4: Education -->
+          <article class="timeline-card-wrapper type-edu">
+            <div class="timeline-node" aria-hidden="true">
+              <span class="node-icon">&#9733;</span>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-card-header">
+                <div class="timeline-meta-row">
+                  <span class="timeline-type-badge badge-edu">EDUCATION</span>
+                  <time class="timeline-period" datetime="2018/2022">2018 &mdash; 2022</time>
+                </div>
+                <h3 class="timeline-heading">B.S. in Computer Science &amp; Engineering</h3>
+                <span class="timeline-org">Institute of Technology &bull; First Class with Distinction</span>
+              </div>
+              <p class="timeline-body">
+                Graduated with honors focusing on Distributed Systems, Algorithms, and Object-Oriented Software Design. Led the University Coding &amp; Open Source Society, organizing hackathons and technical seminars.
+              </p>
+              <ul class="timeline-tags" aria-label="Key competencies">
+                <li>Distributed Systems</li>
+                <li>Data Structures</li>
+                <li>Database Design</li>
+                <li>Operating Systems</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PROJECTS SECTION (Clickable Thumbnails & Detailed View Modals)
+         ========================================== -->
+    <section id="projects" class="projects-section" aria-labelledby="projects-title">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="pixel-section-tag">// FLAGSHIP BUILDS &amp; SYSTEMS</span>
+          <h2 id="projects-title" class="section-title">Featured Projects</h2>
+          <p class="section-lead">Explore featured engineering projects. Click any project thumbnail to inspect architecture diagrams, engineering trade-offs, and live deployments.</p>
+        </div>
+
+        <!-- 4-Card Responsive Projects Grid -->
+        <div class="projects-grid">
+
+          <!-- ==========================================================
+               PROJECT 1: CHRONOSYNC (Distributed Telemetry Platform)
+               THUMBNAIL-TO-DETAIL CONNECTION:
+               The thumbnail container (.project-thumbnail-wrapper) has:
+               - data-modal-target="modal-project-1"
+               - aria-controls="modal-project-1"
+               Clicking this thumbnail triggers the dialog modal with id="modal-project-1".
+               Direct external links (GitHub & Live Demo) are also provided below.
+               ========================================================== -->
+          <article class="project-card" data-project-key="chronosync">
+            <!-- Clickable Thumbnail Container -->
+            <div class="project-thumbnail-wrapper" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-haspopup="dialog" 
+                 aria-controls="modal-project-1" 
+                 data-modal-target="modal-project-1" 
+                 aria-label="Click to view detailed case study for ChronoSync">
+              <div class="project-thumb-canvas thumb-telemetry">
+                <!-- Retro Pixel Art Telemetry Graphic -->
+                <svg class="thumb-pixel-art" viewBox="0 0 320 180" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="320" height="180" fill="#080d1a"/>
+                  <!-- Retro Grid lines -->
+                  <path d="M0 30 H320 M0 60 H320 M0 90 H320 M0 120 H320 M0 150 H320 M40 0 V180 M80 0 V180 M120 0 V180 M160 0 V180 M200 0 V180 M240 0 V180 M280 0 V180" stroke="#13233f" stroke-width="1"/>
+                  <!-- Telemetry Waveform -->
+                  <path d="M0 130 L40 130 L60 80 L80 140 L100 110 L140 110 L160 50 L180 130 L210 100 L240 100 L260 40 L280 120 L320 120" stroke="#00f0ff" stroke-width="3" fill="none" stroke-linejoin="round"/>
+                  <!-- Glowing Node Points -->
+                  <rect x="58" y="78" width="4" height="4" fill="#ff007f"/>
+                  <rect x="158" y="48" width="4" height="4" fill="#ff007f"/>
+                  <rect x="258" y="38" width="4" height="4" fill="#ff007f"/>
+                  <!-- Telemetry HUD Overlay -->
+                  <rect x="14" y="14" width="90" height="20" fill="#10192e" stroke="#00f0ff" stroke-width="1.5"/>
+                  <text x="20" y="28" fill="#00f0ff" font-family="'Press Start 2P', monospace" font-size="7">STREAM: 25K/S</text>
+                </svg>
+              </div>
+              <div class="thumb-hover-overlay">
+                <span class="hover-action-badge">&#9654; VIEW DOSSIER</span>
+              </div>
+              <span class="thumb-category-tag">DISTRIBUTED SYSTEM</span>
+            </div>
+
+            <!-- Card Body Content -->
+            <div class="project-body">
+              <div class="project-meta-row">
+                <h3 class="project-title">ChronoSync</h3>
+                <span class="project-status-dot" title="Production Ready" aria-label="Status: Live"></span>
+              </div>
+              <p class="project-desc">
+                High-throughput distributed telemetry pipeline processing 25,000+ events per second with sub-second WebSockets streaming analytics and anomaly alerts.
+              </p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li>Go</li>
+                <li>TypeScript</li>
+                <li>Redis Pub/Sub</li>
+                <li>Next.js</li>
+                <li>Docker</li>
+              </ul>
+              <div class="project-links">
+                <button type="button" class="btn btn-secondary btn-dossier" data-modal-target="modal-project-1">
+                  <span>Details</span>
+                  <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+                </button>
+                <a href="https://github.com/example/chronosync" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                  <span>Source</span>
+                </a>
+                <a href="https://chronosync-demo.example.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer" title="Launch Live Demo">
+                  <span>Live Demo</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================================
+               PROJECT 2: PIXELFORGE (8-Bit Canvas & Sprite Studio)
+               THUMBNAIL-TO-DETAIL CONNECTION:
+               Connected via data-modal-target="modal-project-2" and aria-controls="modal-project-2".
+               Triggers the dialog modal with id="modal-project-2".
+               ========================================================== -->
+          <article class="project-card" data-project-key="pixelforge">
+            <!-- Clickable Thumbnail Container -->
+            <div class="project-thumbnail-wrapper" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-haspopup="dialog" 
+                 aria-controls="modal-project-2" 
+                 data-modal-target="modal-project-2" 
+                 aria-label="Click to view detailed case study for PixelForge">
+              <div class="project-thumb-canvas thumb-canvas-art">
+                <svg class="thumb-pixel-art" viewBox="0 0 320 180" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="320" height="180" fill="#12101c"/>
+                  <!-- Checkerboard canvas background -->
+                  <pattern id="pixel-check" width="16" height="16" patternUnits="userSpaceOnUse">
+                    <rect width="8" height="8" fill="#1a1728"/>
+                    <rect x="8" width="8" height="8" fill="#141120"/>
+                    <rect y="8" width="8" height="8" fill="#141120"/>
+                    <rect x="8" y="8" width="8" height="8" fill="#1a1728"/>
+                  </pattern>
+                  <rect width="320" height="180" fill="url(#pixel-check)"/>
+                  <!-- Sprite Illustration (Pixel Sword & Shield) -->
+                  <rect x="150" y="40" width="20" height="20" fill="#38bdf8"/>
+                  <rect x="145" y="60" width="30" height="15" fill="#facc15"/>
+                  <rect x="155" y="75" width="10" height="45" fill="#94a3b8"/>
+                  <rect x="140" y="120" width="40" height="8" fill="#e2e8f0"/>
+                  <rect x="155" y="128" width="10" height="20" fill="#78350f"/>
+                  <rect x="150" y="148" width="20" height="10" fill="#f59e0b"/>
+                  <!-- Palette Bar UI -->
+                  <rect x="20" y="145" width="18" height="18" fill="#ef4444" stroke="#fff" stroke-width="1.5"/>
+                  <rect x="42" y="145" width="18" height="18" fill="#3b82f6" stroke="#fff" stroke-width="1.5"/>
+                  <rect x="64" y="145" width="18" height="18" fill="#10b981" stroke="#fff" stroke-width="1.5"/>
+                  <rect x="86" y="145" width="18" height="18" fill="#f59e0b" stroke="#fff" stroke-width="1.5"/>
+                  <rect x="108" y="145" width="18" height="18" fill="#ec4899" stroke="#fff" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="thumb-hover-overlay">
+                <span class="hover-action-badge">&#9654; VIEW DOSSIER</span>
+              </div>
+              <span class="thumb-category-tag">WEB APPLICATION</span>
+            </div>
+
+            <!-- Card Body Content -->
+            <div class="project-body">
+              <div class="project-meta-row">
+                <h3 class="project-title">PixelForge</h3>
+                <span class="project-status-dot" title="Active Project" aria-label="Status: Live"></span>
+              </div>
+              <p class="project-desc">
+                High-performance in-browser 8-bit sprite editor and animation suite with multi-layer editing, custom color indexing, and tilemap sprite sheets export.
+              </p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>HTML5 Canvas</li>
+                <li>WebAssembly</li>
+                <li>Tailwind CSS</li>
+              </ul>
+              <div class="project-links">
+                <button type="button" class="btn btn-secondary btn-dossier" data-modal-target="modal-project-2">
+                  <span>Details</span>
+                  <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+                </button>
+                <a href="https://github.com/example/pixelforge" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                  <span>Source</span>
+                </a>
+                <a href="https://pixelforge-app.example.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer" title="Launch Live Demo">
+                  <span>Live Demo</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================================
+               PROJECT 3: NEXUS GATEWAY (Microservices API Orchestrator)
+               THUMBNAIL-TO-DETAIL CONNECTION:
+               Connected via data-modal-target="modal-project-3" and aria-controls="modal-project-3".
+               Triggers the dialog modal with id="modal-project-3".
+               ========================================================== -->
+          <article class="project-card" data-project-key="nexus-gateway">
+            <!-- Clickable Thumbnail Container -->
+            <div class="project-thumbnail-wrapper" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-haspopup="dialog" 
+                 aria-controls="modal-project-3" 
+                 data-modal-target="modal-project-3" 
+                 aria-label="Click to view detailed case study for Nexus Gateway">
+              <div class="project-thumb-canvas thumb-gateway">
+                <svg class="thumb-pixel-art" viewBox="0 0 320 180" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="320" height="180" fill="#0b1320"/>
+                  <!-- Network topology graphic -->
+                  <circle cx="160" cy="90" r="32" fill="#15243e" stroke="#38bdf8" stroke-width="2"/>
+                  <rect x="148" y="78" width="24" height="24" fill="#0284c7"/>
+                  <text x="152" y="94" fill="#fff" font-family="'Press Start 2P', monospace" font-size="8">&lt;&gt;</text>
+                  <!-- Connected satellite nodes -->
+                  <line x1="160" y1="58" x2="80" y2="40" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4"/>
+                  <line x1="160" y1="58" x2="240" y2="40" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4"/>
+                  <line x1="160" y1="122" x2="80" y2="140" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4"/>
+                  <line x1="160" y1="122" x2="240" y2="140" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4"/>
+                  <rect x="68" y="28" width="24" height="24" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+                  <rect x="228" y="28" width="24" height="24" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+                  <rect x="68" y="128" width="24" height="24" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+                  <rect x="228" y="128" width="24" height="24" fill="#1e293b" stroke="#ec4899" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="thumb-hover-overlay">
+                <span class="hover-action-badge">&#9654; VIEW DOSSIER</span>
+              </div>
+              <span class="thumb-category-tag">DEVELOPER TOOL</span>
+            </div>
+
+            <!-- Card Body Content -->
+            <div class="project-body">
+              <div class="project-meta-row">
+                <h3 class="project-title">Nexus Gateway</h3>
+                <span class="project-status-dot" title="Deployed" aria-label="Status: Live"></span>
+              </div>
+              <p class="project-desc">
+                Cloud-native API gateway service featuring sliding-window rate limiting, circuit breaker fault tolerance, and automated OpenAPI contract validation.
+              </p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>PostgreSQL</li>
+                <li>Redis</li>
+                <li>AWS ECS</li>
+              </ul>
+              <div class="project-links">
+                <button type="button" class="btn btn-secondary btn-dossier" data-modal-target="modal-project-3">
+                  <span>Details</span>
+                  <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+                </button>
+                <a href="https://github.com/example/nexus-gateway" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                  <span>Source</span>
+                </a>
+                <a href="https://nexus-gateway.example.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer" title="Launch Live Demo">
+                  <span>Live Demo</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================================
+               PROJECT 4: CYBERPROMPT (Local AI Assistant CLI)
+               THUMBNAIL-TO-DETAIL CONNECTION:
+               Connected via data-modal-target="modal-project-4" and aria-controls="modal-project-4".
+               Triggers the dialog modal with id="modal-project-4".
+               ========================================================== -->
+          <article class="project-card" data-project-key="cyberprompt">
+            <!-- Clickable Thumbnail Container -->
+            <div class="project-thumbnail-wrapper" 
+                 role="button" 
+                 tabindex="0" 
+                 aria-haspopup="dialog" 
+                 aria-controls="modal-project-4" 
+                 data-modal-target="modal-project-4" 
+                 aria-label="Click to view detailed case study for CyberPrompt">
+              <div class="project-thumb-canvas thumb-terminal-cli">
+                <svg class="thumb-pixel-art" viewBox="0 0 320 180" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <rect width="320" height="180" fill="#0d1117"/>
+                  <!-- CRT Window Frame -->
+                  <rect x="25" y="15" width="270" height="150" fill="#161b22" stroke="#30363d" stroke-width="2"/>
+                  <rect x="25" y="15" width="270" height="20" fill="#21262d"/>
+                  <circle cx="38" cy="25" r="4" fill="#f85149"/>
+                  <circle cx="50" cy="25" r="4" fill="#d29922"/>
+                  <circle cx="62" cy="25" r="4" fill="#3fb950"/>
+                  <!-- CLI code lines -->
+                  <text x="40" y="58" fill="#58a6ff" font-family="'JetBrains Mono', monospace" font-size="9">$ cyberprompt --index ./src</text>
+                  <text x="40" y="78" fill="#7ee787" font-family="'JetBrains Mono', monospace" font-size="9">&#10003; Indexed 1,420 source files</text>
+                  <text x="40" y="98" fill="#c9d1d9" font-family="'JetBrains Mono', monospace" font-size="9">&gt; Query: "Refactor auth middleware"</text>
+                  <text x="40" y="118" fill="#d2a8ff" font-family="'JetBrains Mono', monospace" font-size="9">&#9654; Suggestion ready in 34ms</text>
+                  <rect x="40" y="132" width="8" height="12" fill="#58a6ff" class="cursor-blink"/>
+                </svg>
+              </div>
+              <div class="thumb-hover-overlay">
+                <span class="hover-action-badge">&#9654; VIEW DOSSIER</span>
+              </div>
+              <span class="thumb-category-tag">AI &amp; CLI TOOL</span>
+            </div>
+
+            <!-- Card Body Content -->
+            <div class="project-body">
+              <div class="project-meta-row">
+                <h3 class="project-title">CyberPrompt</h3>
+                <span class="project-status-dot" title="Open Source" aria-label="Status: Live"></span>
+              </div>
+              <p class="project-desc">
+                Fast terminal-based developer assistant CLI that performs vector embedding searches over codebases for instantaneous semantic navigation and refactoring.
+              </p>
+              <ul class="project-tags" aria-label="Technologies used">
+                <li>Python</li>
+                <li>FastAPI</li>
+                <li>SQLite Vector</li>
+                <li>Rich CLI</li>
+                <li>Docker</li>
+              </ul>
+              <div class="project-links">
+                <button type="button" class="btn btn-secondary btn-dossier" data-modal-target="modal-project-4">
+                  <span>Details</span>
+                  <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+                </button>
+                <a href="https://github.com/example/cyberprompt" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" title="View Source on GitHub">
+                  <span>Source</span>
+                </a>
+                <a href="https://cyberprompt-cli.example.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer" title="Launch Live Demo">
+                  <span>Live Demo</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         DETAILED VIEW MODALS (CONNECTED TO PROJECT THUMBNAILS)
+         Each modal is connected by ID to data-modal-target on the thumbnails above.
+         ============================================================== -->
+    
+    <!-- Modal 1: ChronoSync Details -->
+    <dialog id="modal-project-1" class="pixel-project-modal" aria-labelledby="modal-p1-title" aria-modal="true">
+      <div class="modal-dialog-content">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-dossier-tag">// PROJECT DOSSIER: PROJ-01</span>
+            <h3 id="modal-p1-title" class="modal-title">ChronoSync Telemetry Engine</h3>
+          </div>
+          <button type="button" class="pixel-modal-close" aria-label="Close project details dialog">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-summary-section">
+            <h4 class="modal-section-heading">Overview &amp; Architecture</h4>
+            <p>
+              ChronoSync is a distributed streaming telemetry platform engineered to ingest high-frequency metrics from edge microservices. Built with a Go ingestion core, Redis Pub/Sub backplane, and Next.js reactive dashboard, it solves the challenge of real-time monitoring under burst loads.
+            </p>
+          </div>
+          <div class="modal-specs-grid">
+            <div class="spec-card">
+              <span class="spec-label">THROUGHPUT</span>
+              <span class="spec-value highlight-cyan">25,000+ evt/s</span>
+            </div>
+            <div class="spec-card">
+              <span class="spec-label">P99 LATENCY</span>
+              <span class="spec-value highlight-cyan">&lt; 85ms</span>
+            </div>
+            <div class="spec-card">
+              <span class="spec-label">UPTIME TARGET</span>
+              <span class="spec-value highlight-green">99.95%</span>
+            </div>
+          </div>
+          <div class="modal-details-block">
+            <h4 class="modal-section-heading">Engineering Highlights</h4>
+            <ul class="modal-feature-list">
+              <li><strong>Zero-Allocation Parsers:</strong> Designed memory-efficient Go packet decoders to minimize garbage collector pauses.</li>
+              <li><strong>Adaptive Backpressure:</strong> Implemented leaky-bucket flow control to gracefully throttle burst workloads without packet drops.</li>
+              <li><strong>WebSockets Fanout:</strong> Delivers instant telemetry visual frames to hundreds of synchronized dashboard clients.</li>
+            </ul>
+          </div>
+          <div class="modal-stack-block">
+            <h4 class="modal-section-heading">Equipped Stack</h4>
+            <div class="modal-tech-tags">
+              <span>Go</span><span>TypeScript</span><span>Next.js</span><span>Redis</span><span>PostgreSQL</span><span>Docker</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/example/chronosync" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View GitHub Repo &rarr;</a>
+          <a href="https://chronosync-demo.example.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Launch Production Demo &rarr;</a>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Modal 2: PixelForge Details -->
+    <dialog id="modal-project-2" class="pixel-project-modal" aria-labelledby="modal-p2-title" aria-modal="true">
+      <div class="modal-dialog-content">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-dossier-tag">// PROJECT DOSSIER: PROJ-02</span>
+            <h3 id="modal-p2-title" class="modal-title">PixelForge Sprite Studio</h3>
+          </div>
+          <button type="button" class="pixel-modal-close" aria-label="Close project details dialog">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-summary-section">
+            <h4 class="modal-section-heading">Overview &amp; Architecture</h4>
+            <p>
+              PixelForge is a browser-first pixel art workshop crafted for game developers and retro artists. It utilizes WebAssembly and direct HTML5 2D Canvas buffer manipulation to guarantee fluid 60 FPS drawing even with deep undo/redo history trees and multiple layer blends.
+            </p>
+          </div>
+          <div class="modal-specs-grid">
+            <div class="spec-card">
+              <span class="spec-label">FRAME RATE</span>
+              <span class="spec-value highlight-cyan">60 FPS Locked</span>
+            </div>
+            <div class="spec-card">
+              <span class="spec-label">UNDO DEPTH</span>
+              <span class="spec-value highlight-cyan">100+ Steps</span>
+            </div>
+            <div class="spec-card">
+              <span class="spec-label">EXPORT FORMATS</span>
+              <span class="spec-value highlight-green">PNG, GIF, Tilemap</span>
+            </div>
+          </div>
+          <div class="modal-details-block">
+            <h4 class="modal-section-heading">Engineering Highlights</h4>
+            <ul class="modal-feature-list">
+              <li><strong>Direct Pixel Buffering:</strong> Directly modifies ImageData clamped arrays via typed arrays for instantaneous brush rendering.</li>
+              <li><strong>Color Indexing Engine:</strong> Supports classic Game Boy, NES, and PICO-8 color palettes with real-time palette swapping.</li>
+              <li><strong>Animated Onion Skinning:</strong> Enables smooth frame-by-frame character walking cycle previews.</li>
+            </ul>
+          </div>
+          <div class="modal-stack-block">
+            <h4 class="modal-section-heading">Equipped Stack</h4>
+            <div class="modal-tech-tags">
+              <span>React</span><span>TypeScript</span><span>HTML5 Canvas</span><span>WebAssembly</span><span>Tailwind CSS</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/example/pixelforge" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View GitHub Repo &rarr;</a>
+          <a href="https://pixelforge-app.example.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Launch Canvas Studio &rarr;</a>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Modal 3: Nexus Gateway Details -->
+    <dialog id="modal-project-3" class="pixel-project-modal" aria-labelledby="modal-p3-title" aria-modal="true">
+      <div class="modal-dialog-content">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-dossier-tag">// PROJECT DOSSIER: PROJ-03</span>
+            <h3 id="modal-p3-title" class="modal-title">Nexus Gateway Orchestrator</h3>
+          </div>
+          <button type="button" class="pixel-modal-close" aria-label="Close project details dialog">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-summary-section">
+            <h4 class="modal-section-heading">Overview &amp; Architecture</h4>
+            <p>
+              Nexus Gateway is an enterprise-grade reverse proxy and API routing layer. It intercepts inbound client traffic to enforce authentication, sliding-window rate limiting, and circuit breaker health isolation across downstream microservices.
+            </p>
+          </div>
+          <div class="modal-specs-grid">
+            <div class="spec-card">
+              <span class="spec-label">ROUTING OVERHEAD</span>
+              <span class="spec-value highlight-cyan">&lt; 4ms</span>
+            </div>
+            <div class="spec-card">
+              <span class="spec-label">CIRCUIT BREAKER</span>
+              <span class="spec-value highlight-cyan">Auto-Failover</span>
+            </div>
+            <div class="spec-card">
+              <span class="spec-label">SECURITY</span>
+              <span class="spec-value highlight-green">JWT + HMAC</span>
+            </div>
+          </div>
+          <div class="modal-details-block">
+            <h4 class="modal-section-heading">Engineering Highlights</h4>
+            <ul class="modal-feature-list">
+              <li><strong>Distributed Rate Limiting:</strong> Redis sliding-log algorithm ensures precise client quota enforcement across multiple clustered gateway nodes.</li>
+              <li><strong>Zero-Downtime Dynamic Routing:</strong> Hot-reloads endpoint route manifests without restarting running worker threads.</li>
+              <li><strong>Telemetry Logging:</strong> Automated trace propagation with OpenTelemetry standards.</li>
+            </ul>
+          </div>
+          <div class="modal-stack-block">
+            <h4 class="modal-section-heading">Equipped Stack</h4>
+            <div class="modal-tech-tags">
+              <span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>Redis</span><span>AWS ECS</span><span>Docker</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/example/nexus-gateway" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View GitHub Repo &rarr;</a>
+          <a href="https://nexus-gateway.example.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View API Documentation &rarr;</a>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Modal 4: CyberPrompt Details -->
+    <dialog id="modal-project-4" class="pixel-project-modal" aria-labelledby="modal-p4-title" aria-modal="true">
+      <div class="modal-dialog-content">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <span class="modal-dossier-tag">// PROJECT DOSSIER: PROJ-04</span>
+            <h3 id="modal-p4-title" class="modal-title">CyberPrompt AI Assistant CLI</h3>
+          </div>
+          <button type="button" class="pixel-modal-close" aria-label="Close project details dialog">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-summary-section">
+            <h4 class="modal-section-heading">Overview &amp; Architecture</h4>
+            <p>
+              CyberPrompt is an offline-capable command line developer assistant. By generating local vector embeddings over workspace directories, it enables programmers to ask architectural questions, summarize complex call graphs, and refactor code directly inside their preferred terminal.
+            </p>
+          </div>
+          <div class="modal-specs-grid">
+            <div class="spec-card">
+              <span class="spec-label">QUERY LATENCY</span>
+              <span class="spec-value highlight-cyan">~34ms Index Search</span>
+            </div>
+            <div class="spec-card">
+              <span class="spec-label">PRIVACY</span>
+              <span class="spec-value highlight-cyan">100% Local DB</span>
+            </div>
+            <div class="spec-card">
+              <span class="spec-label">CLI ENGINE</span>
+              <span class="spec-value highlight-green">Rich Terminal UI</span>
+            </div>
+          </div>
+          <div class="modal-details-block">
+            <h4 class="modal-section-heading">Engineering Highlights</h4>
+            <ul class="modal-feature-list">
+              <li><strong>AST-Aware Chunking:</strong> Parses source trees using language ASTs to avoid splitting functions across vector boundaries.</li>
+              <li><strong>Streaming Terminal UI:</strong> Syntax-highlighted markdown code generation streamed at 80 tokens/sec.</li>
+              <li><strong>Plug-and-Play Git Integration:</strong> Pre-commit hooks that review git diffs for security vulnerabilities before pushing.</li>
+            </ul>
+          </div>
+          <div class="modal-stack-block">
+            <h4 class="modal-section-heading">Equipped Stack</h4>
+            <div class="modal-tech-tags">
+              <span>Python</span><span>FastAPI</span><span>SQLite Vector</span><span>Rich CLI</span><span>Docker</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/example/cyberprompt" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View GitHub Repo &rarr;</a>
+          <a href="https://cyberprompt-cli.example.com" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Install via Pip &rarr;</a>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- ==========================================
+         PORTFOLIO HIGHLIGHT / INTRODUCTION VIDEO SECTION
+         Embedded responsive YouTube video styled as an authentic retro CRT / arcade terminal
+         ========================================== -->
+    <section id="highlight" class="highlight-section" aria-labelledby="highlight-title">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="pixel-section-tag">// AUDIOVISUAL ARCHIVE &amp; SPOTLIGHT</span>
+          <h2 id="highlight-title" class="section-title">Portfolio Highlight &amp; Introduction</h2>
+          <p class="section-lead">
+            A visual walkthrough showcasing core system design principles, concurrency models, and an overview of the architectural philosophy powering my software engineering work.
+          </p>
+        </div>
+
+        <!-- Video Showcase Layout -->
+        <div class="video-showcase-container">
+          
+          <!-- Retro CRT Arcade Terminal Monitor -->
+          <div class="video-crt-cabinet">
+            
+            <!-- CRT Bezel Top HUD Bar -->
+            <div class="crt-bezel-top">
+              <div class="crt-rec-indicator" title="Stream Status: Recording Live">
+                <span class="rec-dot" aria-hidden="true"></span>
+                <span class="rec-label">REC 00:04:28</span>
+              </div>
+              <div class="crt-channel-title">
+                <span class="crt-ch-badge">CH-01</span>
+                <span class="crt-title-text">SYSTEM_DESIGN_WALKTHROUGH.MP4</span>
+              </div>
+              <div class="crt-hud-status">
+                <span class="crt-badge-hd">[1080P // 60FPS]</span>
+              </div>
+            </div>
+
+            <!-- Responsive Video Frame (Using CSS aspect-ratio with padding fallback) -->
+            <div class="video-responsive-wrapper">
+              <!-- CRT Scanline aesthetic overlay (pointer-events: none, subtle retro scanlines) -->
+              <div class="crt-scanline-overlay" aria-hidden="true"></div>
+
+              <!-- Embedded Responsive YouTube Video -->
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/SqcY0GlETPk?rel=0&amp;modestbranding=1" 
+                title="System Design Architecture Walkthrough - Software Engineering Portfolio Highlight" 
+                loading="lazy" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <!-- Retro CRT Bezel Bottom Deck -->
+            <div class="crt-bezel-bottom">
+              <div class="crt-speaker-grille" aria-hidden="true" title="Audio Output">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <div class="crt-console-status">
+                <span class="signal-dot" aria-hidden="true"></span>
+                <span class="signal-text">AUDIO: DUAL STEREO // LIVE STREAM FEED</span>
+              </div>
+              <div class="crt-power-indicator" title="CRT Power: ACTIVE">
+                <span class="power-led" aria-hidden="true"></span>
+                <span class="power-label">PWR ON</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Video Caption & Content Explanation Card -->
+          <figure class="video-caption-card">
+            <figcaption class="video-caption-content">
+              
+              <div class="caption-header-row">
+                <div class="caption-badge">
+                  <span class="caption-icon" aria-hidden="true">&#9654;</span>
+                  <span>ENGINEERING SPOTLIGHT</span>
+                </div>
+                <span class="caption-duration">DURATION: 1:40 MIN</span>
+              </div>
+
+              <h3 class="caption-heading">System Design &amp; Architecture Walkthrough</h3>
+              
+              <!-- Video Content Explanation / Caption -->
+              <p class="caption-summary">
+                In this technical spotlight, explore the essential building blocks of modern distributed software systems. The walkthrough examines how load balancers, reverse proxies, distributed Redis caches, and database partitioning interact under high concurrency—illustrating the core architecture patterns applied across my flagship projects like <strong>ChronoSync</strong> and <strong>Nexus Gateway</strong>.
+              </p>
+
+              <!-- Video Chapters & Topic Navigation -->
+              <div class="caption-chapters-block">
+                <h4 class="chapters-title">// VIDEO CHAPTERS &amp; TOPICS</h4>
+                <ul class="chapters-list" role="list">
+                  <li>
+                    <span class="ch-time">00:00</span>
+                    <span class="ch-desc">Foundations: Monolithic vs. Distributed Systems</span>
+                  </li>
+                  <li>
+                    <span class="ch-time">00:25</span>
+                    <span class="ch-desc">Load Balancing, Reverse Proxies &amp; DNS Routing</span>
+                  </li>
+                  <li>
+                    <span class="ch-time">00:52</span>
+                    <span class="ch-desc">Distributed Caching &amp; Invalidation Strategies</span>
+                  </li>
+                  <li>
+                    <span class="ch-time">01:20</span>
+                    <span class="ch-desc">Database Sharding, Replication &amp; CAP Trade-offs</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Topic Meta Tags -->
+              <div class="caption-tags-row">
+                <span class="caption-tag">System Architecture</span>
+                <span class="caption-tag">Microservices</span>
+                <span class="caption-tag">Scalability</span>
+                <span class="caption-tag">High Concurrency</span>
+                <span class="caption-tag">Developer Overview</span>
+              </div>
+
+            </figcaption>
+          </figure>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS SECTION (Client & Peer Feedback Cards)
+         Rounded cards with subtle drop shadow, clean readable typography, and retro pixel accents
+         ========================================== -->
+    <section id="testimonials" class="testimonials-section" aria-labelledby="testimonials-title">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="pixel-section-tag">// VERIFIED ENDORSEMENTS &amp; SOCIAL PROOF</span>
+          <h2 id="testimonials-title" class="section-title">Client &amp; Peer Testimonials</h2>
+          <p class="section-lead">
+            Direct feedback and quotes from founders, tech leads, and engineering collaborators on reliability, architectural leadership, and code craftsmanship.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="testimonials-controls" role="toolbar" aria-label="Testimonial categories filter">
+          <button type="button" class="testimonial-filter-btn active" data-filter="all" aria-pressed="true">
+            <span class="filter-cursor" aria-hidden="true">&#9654;</span>
+            <span>ALL REVIEWS (4)</span>
+          </button>
+          <button type="button" class="testimonial-filter-btn" data-filter="client" aria-pressed="false">
+            <span class="filter-cursor" aria-hidden="true">&#9654;</span>
+            <span>CLIENTS &amp; FOUNDERS (2)</span>
+          </button>
+          <button type="button" class="testimonial-filter-btn" data-filter="peer" aria-pressed="false">
+            <span class="filter-cursor" aria-hidden="true">&#9654;</span>
+            <span>PEERS &amp; TECH LEADS (2)</span>
+          </button>
+        </div>
+
+        <!-- 4-Card Responsive Grid -->
+        <div class="testimonials-grid">
+
+          <!-- TESTIMONIAL 1: Peer / Tech Lead -->
+          <article class="testimonial-card" data-category="peer">
+            <div class="card-quote-header">
+              <div class="quote-symbol" aria-hidden="true">
+                <svg class="quote-svg" width="26" height="22" viewBox="0 0 28 24" fill="currentColor">
+                  <path d="M7.5 0C3.36 0 0 3.36 0 7.5c0 3.2 2.01 5.94 4.88 7.02C4.18 17.5 2.5 20.25 0 22.5L2.25 24c4.5-3.5 7.75-8.5 7.75-14 0-.83-.14-1.63-.38-2.38A7.478 7.478 0 007.5 0zm18 0c-4.14 0-7.5 3.36-7.5 7.5 0 3.2 2.01 5.94 4.88 7.02-.7 2.98-2.38 5.73-4.88 7.98L20.25 24c4.5-3.5 7.75-8.5 7.75-14 0-.83-.14-1.63-.38-2.38A7.478 7.478 0 0025.5 0z"/>
+                </svg>
+              </div>
+              <div class="card-rating" aria-label="Rating: 5 out of 5 stars">
+                <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-score">5.0</span>
+              </div>
+            </div>
+
+            <blockquote class="testimonial-quote">
+              <p>
+                &ldquo;Sanath brings a rare blend of deep systems intuition and high-speed execution. During our distributed telemetry overhaul, he designed resilient Redis queues that slashed event ingestion latency by 42%. His code is self-documenting, and he elevates the technical rigor of the entire engineering squad.&rdquo;
+              </p>
+            </blockquote>
+
+            <div class="testimonial-author">
+              <div class="author-avatar-badge avatar-cyan" aria-hidden="true">
+                <span class="avatar-initials">AR</span>
+                <span class="avatar-status-dot"></span>
+              </div>
+              <div class="author-info">
+                <h3 class="author-name">Alex Rivera</h3>
+                <p class="author-role">Staff Software Engineer &bull; Tech Lead at CloudScale</p>
+                <div class="author-meta">
+                  <span class="relation-badge badge-peer">PEER &bull; TECH LEAD</span>
+                  <span class="project-tag">Distributed Telemetry</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- TESTIMONIAL 2: Client / Founder -->
+          <article class="testimonial-card" data-category="client">
+            <div class="card-quote-header">
+              <div class="quote-symbol" aria-hidden="true">
+                <svg class="quote-svg" width="26" height="22" viewBox="0 0 28 24" fill="currentColor">
+                  <path d="M7.5 0C3.36 0 0 3.36 0 7.5c0 3.2 2.01 5.94 4.88 7.02C4.18 17.5 2.5 20.25 0 22.5L2.25 24c4.5-3.5 7.75-8.5 7.75-14 0-.83-.14-1.63-.38-2.38A7.478 7.478 0 007.5 0zm18 0c-4.14 0-7.5 3.36-7.5 7.5 0 3.2 2.01 5.94 4.88 7.02-.7 2.98-2.38 5.73-4.88 7.98L20.25 24c4.5-3.5 7.75-8.5 7.75-14 0-.83-.14-1.63-.38-2.38A7.478 7.478 0 0025.5 0z"/>
+                </svg>
+              </div>
+              <div class="card-rating" aria-label="Rating: 5 out of 5 stars">
+                <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-score">5.0</span>
+              </div>
+            </div>
+
+            <blockquote class="testimonial-quote">
+              <p>
+                &ldquo;Collaborating with Sanath was an absolute game changer for our launch. He converted our complex real-time dashboard requirements into a robust, responsive web application ahead of schedule. Not only did we pass security audits on the first pass, but customer retention doubled post-launch.&rdquo;
+              </p>
+            </blockquote>
+
+            <div class="testimonial-author">
+              <div class="author-avatar-badge avatar-gold" aria-hidden="true">
+                <span class="avatar-initials">ER</span>
+                <span class="avatar-status-dot"></span>
+              </div>
+              <div class="author-info">
+                <h3 class="author-name">Elena Rostova</h3>
+                <p class="author-role">Co-Founder &amp; CEO at ChronoVibe Systems</p>
+                <div class="author-meta">
+                  <span class="relation-badge badge-client">CLIENT &bull; FOUNDER</span>
+                  <span class="project-tag">Full-Stack SaaS Platform</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- TESTIMONIAL 3: Client / VP of Engineering -->
+          <article class="testimonial-card" data-category="client">
+            <div class="card-quote-header">
+              <div class="quote-symbol" aria-hidden="true">
+                <svg class="quote-svg" width="26" height="22" viewBox="0 0 28 24" fill="currentColor">
+                  <path d="M7.5 0C3.36 0 0 3.36 0 7.5c0 3.2 2.01 5.94 4.88 7.02C4.18 17.5 2.5 20.25 0 22.5L2.25 24c4.5-3.5 7.75-8.5 7.75-14 0-.83-.14-1.63-.38-2.38A7.478 7.478 0 007.5 0zm18 0c-4.14 0-7.5 3.36-7.5 7.5 0 3.2 2.01 5.94 4.88 7.02-.7 2.98-2.38 5.73-4.88 7.98L20.25 24c4.5-3.5 7.75-8.5 7.75-14 0-.83-.14-1.63-.38-2.38A7.478 7.478 0 0025.5 0z"/>
+                </svg>
+              </div>
+              <div class="card-rating" aria-label="Rating: 5 out of 5 stars">
+                <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-score">5.0</span>
+              </div>
+            </div>
+
+            <blockquote class="testimonial-quote">
+              <p>
+                &ldquo;Sanath stepped in to architect our high-throughput API gateway during a high-stakes cloud migration. His attention to sliding-window rate limiters, circuit breakers, and end-to-end automated test suites gave our leadership team complete peace of mind. A world-class software engineer.&rdquo;
+              </p>
+            </blockquote>
+
+            <div class="testimonial-author">
+              <div class="author-avatar-badge avatar-indigo" aria-hidden="true">
+                <span class="avatar-initials">MV</span>
+                <span class="avatar-status-dot"></span>
+              </div>
+              <div class="author-info">
+                <h3 class="author-name">Marcus Vance</h3>
+                <p class="author-role">VP of Engineering at Apex Financial Technologies</p>
+                <div class="author-meta">
+                  <span class="relation-badge badge-client">CLIENT &bull; ENTERPRISE</span>
+                  <span class="project-tag">API Gateway &amp; Microservices</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- TESTIMONIAL 4: Peer / Senior Open-Source Collaborator -->
+          <article class="testimonial-card" data-category="peer">
+            <div class="card-quote-header">
+              <div class="quote-symbol" aria-hidden="true">
+                <svg class="quote-svg" width="26" height="22" viewBox="0 0 28 24" fill="currentColor">
+                  <path d="M7.5 0C3.36 0 0 3.36 0 7.5c0 3.2 2.01 5.94 4.88 7.02C4.18 17.5 2.5 20.25 0 22.5L2.25 24c4.5-3.5 7.75-8.5 7.75-14 0-.83-.14-1.63-.38-2.38A7.478 7.478 0 007.5 0zm18 0c-4.14 0-7.5 3.36-7.5 7.5 0 3.2 2.01 5.94 4.88 7.02-.7 2.98-2.38 5.73-4.88 7.98L20.25 24c4.5-3.5 7.75-8.5 7.75-14 0-.83-.14-1.63-.38-2.38A7.478 7.478 0 0025.5 0z"/>
+                </svg>
+              </div>
+              <div class="card-rating" aria-label="Rating: 5 out of 5 stars">
+                <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="rating-score">5.0</span>
+              </div>
+            </div>
+
+            <blockquote class="testimonial-quote">
+              <p>
+                &ldquo;In complex systems and open-source ecosystems, clarity of abstraction is everything. Sanath's contributions to our vector search CLI demonstrated exceptional mastery of AST chunking, concurrency primitives, and developer ergonomics. An absolute powerhouse to pair program with.&rdquo;
+              </p>
+            </blockquote>
+
+            <div class="testimonial-author">
+              <div class="author-avatar-badge avatar-pink" aria-hidden="true">
+                <span class="avatar-initials">AT</span>
+                <span class="avatar-status-dot"></span>
+              </div>
+              <div class="author-info">
+                <h3 class="author-name">Dr. Aris Thorne</h3>
+                <p class="author-role">Principal AI Researcher &bull; Core OSS Maintainer</p>
+                <div class="author-meta">
+                  <span class="relation-badge badge-peer">PEER &bull; COLLABORATOR</span>
+                  <span class="project-tag">CLI &amp; Vector Embeddings</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Endorsement Metrics Ribbon -->
+        <div class="testimonials-metrics-ribbon" role="region" aria-label="Performance metrics summary">
+          <div class="t-metric-item">
+            <span class="t-metric-val">100%</span>
+            <span class="t-metric-lbl">On-Time Milestones</span>
+          </div>
+          <div class="t-metric-divider" aria-hidden="true"></div>
+          <div class="t-metric-item">
+            <span class="t-metric-val">5.0 ★</span>
+            <span class="t-metric-lbl">Average Peer Rating</span>
+          </div>
+          <div class="t-metric-divider" aria-hidden="true"></div>
+          <div class="t-metric-item">
+            <span class="t-metric-val">15+</span>
+            <span class="t-metric-lbl">Production Systems Shipped</span>
+          </div>
+          <div class="t-metric-divider" aria-hidden="true"></div>
+          <div class="t-metric-item">
+            <span class="t-metric-val">0</span>
+            <span class="t-metric-lbl">Critical Security Regressions</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CHAT SECTION (AI Replica Chat Interface)
+         Interactive window with message display area, input bar, prompt suggestions, and simulated responses
+         ========================================== -->
+    <section id="chat" class="chat-section" aria-labelledby="chat-title">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="pixel-section-tag">// INTERACTIVE AI REPLICA &amp; TERMINAL</span>
+          <h2 id="chat-title" class="section-title">Chat with AI Sanath</h2>
+          <p class="section-lead">
+            Have a question about my architecture choices, open-source builds, or availability for full-time and contract roles? Chat with my interactive digital clone below!
+          </p>
+        </div>
+
+        <!-- Chat Window Interface -->
+        <div class="chat-window-card">
+          
+          <!-- Chat Window Header Bar -->
+          <div class="chat-window-header">
+            <div class="chat-header-identity">
+              <div class="chat-avatar-frame" aria-hidden="true">
+                <img src="sanath-pixel-avatar.jpg" alt="AI Sanath Avatar" class="chat-avatar-img">
+                <span class="chat-status-pulse" title="System Online"></span>
+              </div>
+              <div class="chat-title-block">
+                <div class="chat-title-row">
+                  <span class="chat-name">SANATH_AI</span>
+                  <span class="chat-model-tag">NEURAL REPLICA</span>
+                </div>
+                <span class="chat-status-sub">&bull; Online &bull; Latency: ~40ms &bull; Ready</span>
+              </div>
+            </div>
+
+            <div class="chat-header-actions">
+              <span class="chat-version-pill">MODEL: GPT-SIM</span>
+              <button type="button" id="chat-reset-btn" class="chat-reset-button" title="Clear chat conversation" aria-label="Clear chat conversation">
+                <span class="btn-reset-icon" aria-hidden="true">&#8635;</span>
+                <span>CLEAR</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Suggested Starter Prompts -->
+          <div class="chat-starter-prompts" aria-label="Suggested starter questions">
+            <span class="prompts-label">QUICK PROMPTS:</span>
+            <button type="button" class="prompt-chip" data-question="What are your core technical skills?">
+              ⚡ Top Skills
+            </button>
+            <button type="button" class="prompt-chip" data-question="Tell me about your ChronoSync project.">
+              🚀 ChronoSync Project
+            </button>
+            <button type="button" class="prompt-chip" data-question="Are you available for contract or full-time roles?">
+              💼 Hiring &amp; Availability
+            </button>
+            <button type="button" class="prompt-chip" data-question="How can I contact you?">
+              📬 Contact Details
+            </button>
+          </div>
+
+          <!-- Message Display Area -->
+          <div id="chat-messages-area" class="chat-messages-area" role="log" aria-live="polite" aria-label="Chat messages history">
+            
+            <!-- Default Welcome Message from AI Sanath -->
+            <div class="chat-bubble-row ai-row">
+              <div class="chat-bubble-avatar" aria-hidden="true">
+                <img src="sanath-pixel-avatar.jpg" alt="AI Avatar">
+              </div>
+              <div class="chat-bubble ai-bubble">
+                <div class="bubble-meta">
+                  <span class="bubble-sender">AI SANATH</span>
+                  <span class="bubble-time">SYSTEM ONLINE</span>
+                </div>
+                <div class="bubble-text">
+                  <p>Greetings, traveler! I'm an interactive AI clone of <strong>Sanath Kumar</strong>. I can answer questions about my engineering background, tech stack (TypeScript, Go, React, Python), flagship projects, or availability.</p>
+                  <p class="bubble-hint">Feel free to type a message below or click one of the quick prompt chips above!</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Typing Indicator (Visible during simulated response delay) -->
+          <div id="chat-typing-indicator" class="chat-typing-indicator hidden" aria-hidden="true">
+            <div class="typing-avatar">
+              <img src="sanath-pixel-avatar.jpg" alt="AI Typing">
+            </div>
+            <div class="typing-bubble">
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+              <span class="typing-dot"></span>
+              <span class="typing-text">AI Sanath is typing...</span>
+            </div>
+          </div>
+
+          <!-- Input Bar & Form -->
+          <form id="chat-form" class="chat-input-bar">
+            <div class="input-prompt-symbol" aria-hidden="true">&gt;&gt;</div>
+            <input 
+              type="text" 
+              id="chat-input" 
+              class="chat-text-input" 
+              placeholder="Ask AI Sanath anything (e.g., 'What architecture patterns do you use?')..." 
+              autocomplete="off" 
+              aria-label="Message to AI Sanath"
+              required>
+            <button type="submit" id="chat-send-btn" class="chat-send-btn" aria-label="Send message">
+              <span>SEND</span>
+              <span class="btn-arrow" aria-hidden="true">&crarr;</span>
+            </button>
+          </form>
+
+          <!-- Terminal Status Footer -->
+          <div class="chat-window-footer">
+            <span class="footer-note">Press <strong>Enter &crarr;</strong> to send &bull; Simulated AI Engine Active</span>
+            <span class="footer-api-ready">[OPENAI / LLM API READY]</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT SECTION (Interactive Form & Direct Channels)
+         Dedicated section with high-contrast form, Resend API integration blueprint, and confirmation alerts
+         ========================================== -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section-header">
+          <span class="pixel-section-tag">// SECURE TRANSMISSION CHANNEL</span>
+          <h2 id="contact-title" class="section-title">Get In Touch</h2>
+          <p class="section-lead">
+            Have an open opportunity, a distributed systems challenge, or an exciting project in mind? Drop a message below or reach out directly.
+          </p>
+        </div>
+
+        <!-- 2-Column Responsive Contact Layout -->
+        <div class="contact-grid">
+          
+          <!-- Column 1: Direct Contact Info & Communication Channels -->
+          <aside class="contact-info-card">
+            
+            <div class="contact-card-header">
+              <span class="info-badge">DISPATCH COMM</span>
+              <h3 class="info-title">Let's Build Something Exceptional</h3>
+              <p class="info-desc">
+                I'm actively discussing full-time software engineering roles, high-concurrency architecture consulting, and select open-source initiatives.
+              </p>
+            </div>
+
+            <ul class="contact-methods-list" role="list">
+              <li class="contact-method-item">
+                <div class="method-icon-box" aria-hidden="true">
+                  <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                    <rect x="1" y="3" width="14" height="10"/>
+                    <rect x="3" y="5" width="2" height="2" class="pixel-cutout"/>
+                    <rect x="11" y="5" width="2" height="2" class="pixel-cutout"/>
+                    <rect x="5" y="7" width="2" height="2" class="pixel-cutout"/>
+                    <rect x="9" y="7" width="2" height="2" class="pixel-cutout"/>
+                    <rect x="7" y="8" width="2" height="2" class="pixel-cutout"/>
+                  </svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">DIRECT EMAIL</span>
+                  <a href="mailto:contact@sanath.dev" class="method-link">contact@sanath.dev</a>
+                </div>
+              </li>
+
+              <li class="contact-method-item">
+                <div class="method-icon-box" aria-hidden="true">
+                  <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                    <rect x="6" y="2" width="4" height="2"/>
+                    <rect x="4" y="4" width="8" height="2"/>
+                    <rect x="3" y="6" width="10" height="4"/>
+                    <rect x="4" y="10" width="8" height="2"/>
+                    <rect x="6" y="12" width="4" height="2"/>
+                    <rect x="7" y="7" width="2" height="2" class="pixel-cutout"/>
+                  </svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">LOCATION &amp; TIMEZONE</span>
+                  <span class="method-value">San Francisco, CA &bull; UTC-7 (PST) / Remote</span>
+                </div>
+              </li>
+
+              <li class="contact-method-item">
+                <div class="method-icon-box" aria-hidden="true">
+                  <svg class="pixel-icon" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                    <rect x="3" y="2" width="10" height="12"/>
+                    <rect x="5" y="4" width="6" height="2" class="pixel-cutout"/>
+                    <rect x="5" y="7" width="6" height="2" class="pixel-cutout"/>
+                    <rect x="5" y="10" width="4" height="2" class="pixel-cutout"/>
+                  </svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">RESPONSE SLA</span>
+                  <span class="method-value">&le; 24 Hours Response Guarantee</span>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact-status-strip">
+              <span class="status-pulse-dot" aria-hidden="true"></span>
+              <span class="status-strip-text">STATUS: AVAILABLE FOR NEW ENGAGEMENTS</span>
+            </div>
+
+          </aside>
+
+          <!-- Column 2: The Contact Form Container -->
+          <div class="contact-form-container">
+            
+            <!-- Success Confirmation Banner (Hidden by default, shown upon submission) -->
+            <div id="contact-confirmation" class="contact-confirmation-box hidden" role="alert" aria-live="polite">
+              <div class="confirm-icon-box" aria-hidden="true">&#10004;</div>
+              <div class="confirm-content">
+                <h4 class="confirm-title">// TRANSMISSION CONFIRMED!</h4>
+                <p id="confirm-message" class="confirm-desc">
+                  Thank you! Your message has been received. I've sent a dispatch notification to my inbox and will get back to you shortly.
+                </p>
+                <button type="button" id="confirm-reset-btn" class="confirm-reset-btn">
+                  <span>SEND ANOTHER MESSAGE &rarr;</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- The Main Form -->
+            <form id="contact-form" class="contact-form" novalidate>
+              
+              <div class="form-header-bar">
+                <span class="form-channel-code">SECURE DISPATCH // FORM-01</span>
+                <span class="form-req-notice"><span class="req-star">*</span> Required fields</span>
+              </div>
+
+              <!-- Name Field -->
+              <div class="form-group">
+                <label for="contact-name" class="form-label">
+                  <span>Your Name</span>
+                  <span class="req-star" aria-hidden="true">*</span>
+                </label>
+                <div class="form-input-wrapper">
+                  <span class="input-icon" aria-hidden="true">&gt;</span>
+                  <input 
+                    type="text" 
+                    id="contact-name" 
+                    name="name" 
+                    class="form-input" 
+                    placeholder="e.g., Alex Rivera" 
+                    required 
+                    autocomplete="name">
+                </div>
+                <span class="field-error-msg" id="name-error" aria-live="polite"></span>
+              </div>
+
+              <!-- Email Field -->
+              <div class="form-group">
+                <label for="contact-email" class="form-label">
+                  <span>Your Email Address</span>
+                  <span class="req-star" aria-hidden="true">*</span>
+                </label>
+                <div class="form-input-wrapper">
+                  <span class="input-icon" aria-hidden="true">@</span>
+                  <input 
+                    type="email" 
+                    id="contact-email" 
+                    name="email" 
+                    class="form-input" 
+                    placeholder="e.g., alex.rivera@company.com" 
+                    required 
+                    autocomplete="email">
+                </div>
+                <span class="field-error-msg" id="email-error" aria-live="polite"></span>
+              </div>
+
+              <!-- Message Field -->
+              <div class="form-group">
+                <label for="contact-message" class="form-label">
+                  <span>Your Message</span>
+                  <span class="req-star" aria-hidden="true">*</span>
+                </label>
+                <div class="form-input-wrapper textarea-wrapper">
+                  <textarea 
+                    id="contact-message" 
+                    name="message" 
+                    class="form-input form-textarea" 
+                    rows="5" 
+                    placeholder="Describe your project, team opportunity, or question in detail..." 
+                    required></textarea>
+                </div>
+                <span class="field-error-msg" id="message-error" aria-live="polite"></span>
+              </div>
+
+              <!-- High-Contrast Submit Button -->
+              <div class="form-action-row">
+                <button type="submit" id="contact-submit-btn" class="btn-contact-submit">
+                  <span class="btn-submit-icon" aria-hidden="true">&#9654;</span>
+                  <span class="btn-submit-text">DISPATCH MESSAGE</span>
+                  <span class="btn-submit-badge">SEND</span>
+                </button>
+              </div>
+
+              <div class="form-privacy-note">
+                <span>&#128274; 256-bit encrypted transmission &bull; Zero spam guarantee &bull; Resend API Ready</span>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <!-- ==========================================
+       FOOTER (Pixel Art Social Profiles, Sitemap & Back-to-Top)
+       ========================================== -->
+  <footer id="footer" class="site-footer" role="contentinfo">
+    
+    <!-- Decorative Pixel Horizon Divider -->
+    <div class="footer-pixel-divider" aria-hidden="true">
+      <div class="container divider-inner">
+        <span class="divider-status">SYSTEM STATUS: ALL SERVICES ONLINE</span>
+        <span class="divider-ticker">&bull; 2026 EDITION &bull; LEVEL 99 CODE ARCHITECT &bull;</span>
+        <span class="divider-coords">[SF_CA // REMOTE]</span>
+      </div>
+    </div>
+
+    <!-- Main Footer Content Grid -->
+    <div class="container footer-content-grid">
+      
+      <!-- Column 1: Identity, Avatar & Brand Manifesto -->
+      <div class="footer-col footer-col-brand">
+        <div class="footer-brand-header">
+          <div class="footer-mini-avatar" aria-hidden="true">
+            <img src="sanath-pixel-avatar.jpg" alt="Sanath Kumar pixel avatar">
+          </div>
+          <div class="footer-brand-text">
+            <span class="footer-logo-text">SANATH.DEV</span>
+            <span class="footer-role-text">Software Engineer</span>
+          </div>
+        </div>
+        <p class="footer-manifesto">
+          Architecting high-throughput distributed systems, interactive web applications, and developer tooling with precision, reliability, and clean code craftsmanship.
+        </p>
+        <div class="footer-status-pill">
+          <span class="pill-dot" aria-hidden="true"></span>
+          <span>AVAILABLE FOR NEW OPPORTUNITIES</span>
+        </div>
+      </div>
+
+      <!-- Column 2: Social Media Profiles (Evenly Spaced Pixel Art Tiles with Hover Tooltips & Accessible ARIA) -->
+      <div class="footer-col footer-col-social">
+        <h3 class="footer-col-title">// CONNECT &amp; TRANSMIT</h3>
+        <p class="footer-social-intro">Explore code repositories, professional networks, and open engineering dispatches:</p>
+        
+        <ul class="footer-social-deck" role="list" aria-label="Social media profiles and external developer channels">
+          
+          <!-- 1. GitHub -->
+          <li class="social-item">
+            <a href="https://github.com/sanathkumar" 
+               class="social-pixel-tile tile-github" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="GitHub profile: View code repositories and open-source contributions by Sanath Kumar (opens in a new tab)"
+               data-channel="GITHUB // github.com/sanathkumar &bull; 80+ Repositories &amp; OSS Projects">
+              <svg class="pixel-social-icon" viewBox="0 0 16 16" width="22" height="22" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+                <!-- Ears -->
+                <rect x="3" y="1" width="2" height="2"/>
+                <rect x="11" y="1" width="2" height="2"/>
+                <!-- Forehead -->
+                <rect x="5" y="2" width="6" height="2"/>
+                <!-- Brow -->
+                <rect x="2" y="4" width="12" height="2"/>
+                <!-- Cheeks & Center Bridge (Eyes at 4-5 and 10-11 are transparent) -->
+                <rect x="1" y="6" width="3" height="3"/>
+                <rect x="6" y="6" width="4" height="3"/>
+                <rect x="12" y="6" width="3" height="3"/>
+                <!-- Mouth line (Snout slit at 7-8 is transparent) -->
+                <rect x="3" y="9" width="4" height="1"/>
+                <rect x="9" y="9" width="4" height="1"/>
+                <!-- Chin -->
+                <rect x="3" y="10" width="10" height="2"/>
+                <!-- Torso & Tentacles/Feet -->
+                <rect x="4" y="12" width="8" height="2"/>
+                <rect x="5" y="14" width="2" height="1"/>
+                <rect x="9" y="14" width="2" height="1"/>
+              </svg>
+              <span class="social-tooltip" aria-hidden="true">GITHUB</span>
+            </a>
+          </li>
+
+          <!-- 2. LinkedIn -->
+          <li class="social-item">
+            <a href="https://linkedin.com/in/sanathkumar" 
+               class="social-pixel-tile tile-linkedin" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="LinkedIn profile: Connect with Sanath Kumar for career opportunities and professional networking (opens in a new tab)"
+               data-channel="LINKEDIN // linkedin.com/in/sanathkumar &bull; Senior Software Engineer">
+              <svg class="pixel-social-icon" viewBox="0 0 16 16" width="22" height="22" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+                <!-- 'i' dot -->
+                <rect x="2" y="2" width="3" height="3"/>
+                <!-- 'i' stem -->
+                <rect x="2" y="6" width="3" height="8"/>
+                <!-- 'n' left stem -->
+                <rect x="6" y="6" width="3" height="8"/>
+                <!-- 'n' top arch -->
+                <rect x="9" y="6" width="3" height="2"/>
+                <!-- 'n' right stem -->
+                <rect x="11" y="8" width="3" height="6"/>
+              </svg>
+              <span class="social-tooltip" aria-hidden="true">LINKEDIN</span>
+            </a>
+          </li>
+
+          <!-- 3. Twitter / X -->
+          <li class="social-item">
+            <a href="https://x.com/sanath_dev" 
+               class="social-pixel-tile tile-twitter" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="X (formerly Twitter) profile: Follow Sanath Kumar for technical insights and software architecture dispatches (opens in a new tab)"
+               data-channel="TWITTER / X // x.com/sanath_dev &bull; Architecture Dispatches &amp; Tech Insights">
+              <svg class="pixel-social-icon" viewBox="0 0 16 16" width="22" height="22" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+                <!-- Thick stepped diagonal beam -->
+                <rect x="1" y="2" width="5" height="1"/>
+                <rect x="2" y="3" width="3" height="2"/>
+                <rect x="4" y="5" width="3" height="2"/>
+                <rect x="6" y="7" width="4" height="2"/>
+                <rect x="9" y="9" width="3" height="2"/>
+                <rect x="11" y="11" width="3" height="2"/>
+                <rect x="10" y="13" width="5" height="1"/>
+                <!-- Thin stepped diagonal beam -->
+                <rect x="11" y="2" width="3" height="2"/>
+                <rect x="9" y="4" width="2" height="2"/>
+                <rect x="5" y="10" width="2" height="2"/>
+                <rect x="2" y="12" width="3" height="2"/>
+              </svg>
+              <span class="social-tooltip" aria-hidden="true">TWITTER/X</span>
+            </a>
+          </li>
+
+          <!-- 4. Discord -->
+          <li class="social-item">
+            <a href="https://discord.com/users/sanath_dev" 
+               class="social-pixel-tile tile-discord" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="Discord profile: Join Sanath Kumar on Discord for developer community and real-time collaboration (opens in a new tab)"
+               data-channel="DISCORD // @sanath_dev &bull; Real-time Developer Collaboration">
+              <svg class="pixel-social-icon" viewBox="0 0 16 16" width="22" height="22" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+                <!-- Top arch -->
+                <rect x="3" y="3" width="10" height="2"/>
+                <!-- Outer wings -->
+                <rect x="1" y="4" width="2" height="3"/>
+                <rect x="13" y="4" width="2" height="3"/>
+                <!-- Forehead -->
+                <rect x="2" y="5" width="12" height="2"/>
+                <!-- Cheeks & Bridge (Eyes at 4-5 and 10-11 at y=7,8 are transparent) -->
+                <rect x="1" y="7" width="3" height="3"/>
+                <rect x="6" y="7" width="4" height="3"/>
+                <rect x="12" y="7" width="3" height="3"/>
+                <!-- Lower face -->
+                <rect x="2" y="10" width="12" height="2"/>
+                <!-- Bottom controller grips (Center indentation is transparent) -->
+                <rect x="2" y="12" width="3" height="2"/>
+                <rect x="11" y="12" width="3" height="2"/>
+              </svg>
+              <span class="social-tooltip" aria-hidden="true">DISCORD</span>
+            </a>
+          </li>
+
+          <!-- 5. LeetCode -->
+          <li class="social-item">
+            <a href="https://leetcode.com/u/sanathkumar/" 
+               class="social-pixel-tile tile-leetcode" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               aria-label="LeetCode profile: View algorithmic solutions and competitive coding benchmarks by Sanath Kumar (opens in a new tab)"
+               data-channel="LEETCODE // leetcode.com/u/sanathkumar &bull; Algorithms &amp; Problem Solving Benchmarks">
+              <svg class="pixel-social-icon" viewBox="0 0 16 16" width="22" height="22" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+                <!-- Left Code Bracket '{' -->
+                <rect x="2" y="2" width="4" height="2"/>
+                <rect x="2" y="4" width="2" height="3"/>
+                <rect x="1" y="7" width="3" height="2"/>
+                <rect x="2" y="9" width="2" height="3"/>
+                <rect x="2" y="12" width="4" height="2"/>
+                <!-- Right Code Bracket '}' -->
+                <rect x="10" y="2" width="4" height="2"/>
+                <rect x="12" y="4" width="2" height="3"/>
+                <rect x="12" y="7" width="3" height="2"/>
+                <rect x="12" y="9" width="2" height="3"/>
+                <rect x="10" y="12" width="4" height="2"/>
+                <!-- Algorithmic Slash / Cursor -->
+                <rect x="9" y="5" width="2" height="2"/>
+                <rect x="7" y="7" width="2" height="2"/>
+                <rect x="5" y="9" width="2" height="2"/>
+              </svg>
+              <span class="social-tooltip" aria-hidden="true">LEETCODE</span>
+            </a>
+          </li>
+
+          <!-- 6. Direct Email Dispatch -->
+          <li class="social-item">
+            <a href="mailto:contact@sanath.dev" 
+               class="social-pixel-tile tile-email" 
+               aria-label="Send email: Compose a direct dispatch to Sanath Kumar at contact@sanath.dev"
+               data-channel="EMAIL // contact@sanath.dev &bull; Direct 256-Bit Encrypted Dispatch">
+              <svg class="pixel-social-icon" viewBox="0 0 16 16" width="22" height="22" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+                <!-- Envelope top rim -->
+                <rect x="1" y="3" width="14" height="2"/>
+                <!-- Flap V-lines -->
+                <rect x="3" y="5" width="2" height="1"/>
+                <rect x="11" y="5" width="2" height="1"/>
+                <rect x="5" y="6" width="2" height="1"/>
+                <rect x="9" y="6" width="2" height="1"/>
+                <rect x="7" y="7" width="2" height="2"/>
+                <!-- Outer envelope walls -->
+                <rect x="1" y="5" width="2" height="8"/>
+                <rect x="13" y="5" width="2" height="8"/>
+                <!-- Bottom rim -->
+                <rect x="1" y="12" width="14" height="2"/>
+                <!-- Crease accents -->
+                <rect x="3" y="10" width="2" height="1"/>
+                <rect x="11" y="10" width="2" height="1"/>
+                <rect x="4" y="9" width="2" height="1"/>
+                <rect x="10" y="9" width="2" height="1"/>
+              </svg>
+              <span class="social-tooltip" aria-hidden="true">EMAIL</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <!-- Live Terminal Transmission Monitor -->
+        <div class="social-live-terminal" id="social-live-terminal" aria-live="polite">
+          <span class="terminal-prefix" aria-hidden="true">&gt;</span>
+          <span class="terminal-status-text" id="social-status-text">TRANSMISSION CHANNELS ACTIVE // HOVER OR FOCUS FOR TARGET SPECS</span>
+        </div>
+      </div>
+
+      <!-- Column 3: Fast Navigation Sitemap -->
+      <div class="footer-col footer-col-links">
+        <h3 class="footer-col-title">// SECTOR SITEMAP</h3>
+        <ul class="footer-nav-list" role="list">
+          <li><a href="#hero" class="footer-nav-link"><span class="nav-arrow" aria-hidden="true">&gt;</span> Home</a></li>
+          <li><a href="#about" class="footer-nav-link"><span class="nav-arrow" aria-hidden="true">&gt;</span> About Me</a></li>
+          <li><a href="#skills" class="footer-nav-link"><span class="nav-arrow" aria-hidden="true">&gt;</span> Skill Trees</a></li>
+          <li><a href="#timeline" class="footer-nav-link"><span class="nav-arrow" aria-hidden="true">&gt;</span> Timeline</a></li>
+          <li><a href="#projects" class="footer-nav-link"><span class="nav-arrow" aria-hidden="true">&gt;</span> Featured Projects</a></li>
+          <li><a href="#highlight" class="footer-nav-link"><span class="nav-arrow" aria-hidden="true">&gt;</span> Video Spotlight</a></li>
+          <li><a href="#testimonials" class="footer-nav-link"><span class="nav-arrow" aria-hidden="true">&gt;</span> Testimonials</a></li>
+          <li><a href="#chat" class="footer-nav-link"><span class="nav-arrow" aria-hidden="true">&gt;</span> AI Terminal</a></li>
+          <li><a href="#contact" class="footer-nav-link"><span class="nav-arrow" aria-hidden="true">&gt;</span> Get In Touch</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright & Back-to-Top Bar -->
+    <div class="container footer-bottom-bar">
+      <div class="bottom-left">
+        <p class="footer-copyright">&copy; 2026 Sanath Kumar. Crafted with semantic HTML5, vanilla CSS &amp; authentic pixel art.</p>
+        <span class="footer-build-tag">BUILD: v2026.4.10 // 100% LIGHTWEIGHT</span>
+      </div>
+      <a href="#hero" class="back-to-top-btn" aria-label="Return to top of page">
+        <span class="top-arrow" aria-hidden="true">&#9650;</span>
+        <span>RETURN TO TOP</span>
+      </a>
+    </div>
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
